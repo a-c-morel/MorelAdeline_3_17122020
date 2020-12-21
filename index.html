@@ -11,9 +11,11 @@
 
     <header>
 
-        <section>
-            <img src="images/logo/ohmyfood.png" alt="logo Ohmyfood"> <!--maybe not in a <a>, because there is a back button on the other pages of the website, so why make it double ?-->
-        </section>
+        <nav>
+            <a href="index.html">
+                <img src="images/logo/ohmyfood.png" alt="logo Ohmyfood">
+            </a>
+        </nav>
         
         <section>
             <i></i> <!--for the icon fontAwesome-->
@@ -23,9 +25,7 @@
         <section>
             <h1>Réservez le menu qui vous convient</h1>
             <h2>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>
-            <nav>
-                <a href=""><button>Explorer nos restaurants</button></a>
-            </nav>
+            <a href=""><button>Explorer nos restaurants</button></a>
         </section>
 
     </header>
@@ -54,39 +54,47 @@
             <h1>Restaurants</h1>
 
             <article> <!--card 1-->
-                <section><img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="aperçu du restaurant La palette du goût"></section>
-                <section>
+                <div>
+                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="aperçu du restaurant La palette du goût">
+                </div>
+                <div>
                     <h2>La palette du goût</h2>
                     <p>Ménilmontant</p>
                     <i></i> <!--or div, or else, that will stand for the like button-->
-                </section>
+                </div>
             </article>
 
             <article> <!--card 2-->
-                <section><img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="aperçu du restaurant La note enchantée"></section>
-                <section>
+                <div>
+                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="aperçu du restaurant La note enchantée">
+                </div>
+                <div>
                     <h2>La note enchantée</h2>
                     <p>Charonne</p>
-                    <i></i> <!--or div, or else, that will stand for the like button-->
-                </section>
+                    <i></i>
+                </div>
             </article>
 
             <article> <!--card 3-->
-                <section><img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="aperçu du restaurant A la française"></section>
-                <section>
+                <div>
+                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="aperçu du restaurant A la française">
+                </div>
+                <div>
                     <h2>A la française</h2>
                     <p>Cité Rouge</p>
-                    <i></i> <!--or div, or else, that will stand for the like button-->
-                </section>
+                    <i></i>
+                </div>
             </article>
 
             <article> <!--card 4-->
-                <section><img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="aperçu du restaurant Le délice des sens"></section>
-                <section>
+                <div>
+                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="aperçu du restaurant Le délice des sens">
+                </div>
+                <div>
                     <h2>Le délice des sens</h2>
                     <p>Folie-Méricourt</p>
-                    <i></i> <!--or div, or else, that will stand for the like button-->
-                </section>
+                    <i></i>
+                </div>
             </article>
 
         </section>
@@ -96,17 +104,22 @@
 
     <footer>
 
-        <img src="images/logo/ohmyfood.png" alt="logo Ohmyfood"> <!--see if I put it in another markup-->
-
+        <div>
+            <a href="index.html">
+                <img src="images/logo/ohmyfood.png" alt="logo Ohmyfood">
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href=""><i></i><p>Proposer un restaurant</p></a></li> <!--I'm not sure about the <p> markup, is it useful ? (<i> is for the fontAwesome icon)-->
                 <li><a href=""><i></i><p>Devenir partenaire</p></a></li>
                 <li><a href="">Mentions légales</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="mailto:ohmyfood@yummymail.com">Contact</a></li>
             </ul>
         </nav>
 
     </footer>
+
+
 </body>
 </html>
