@@ -1,0 +1,51 @@
+%column {
+	display: flex;
+	flex-direction: column;
+}
+
+%flexstart {
+	align-items: flex-start;
+}
+
+%center {
+    align-items: center;
+}
+
+body{
+    @extend %column;
+}
+
+header{
+    @extend %column;
+    .banner{
+        @extend %column;
+        @extend %center;
+    }
+    .place{
+        @extend %column;
+        @extend %center;
+    }
+    .about{
+        @extend %column;
+        @extend %center;
+    }
+}
+
+main{
+    @extend %column;
+    .howto{
+        @extend %column;
+        @extend %flexstart;
+    }
+    .restaurants{
+        @extend %column;
+        @extend %flexstart;
+    }
+}
+
+.card{
+    @extend %column;
+}
+
+
+
