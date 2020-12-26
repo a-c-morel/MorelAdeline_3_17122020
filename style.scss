@@ -31,6 +31,20 @@ header{
     }
 }
 
+.submit{
+    border-radius:25px;
+    padding:20px;
+    background:linear-gradient(to bottom right, #FF79DA,#9356DC);
+    color:white;
+    border:none; cursor:pointer;
+    box-shadow: 5px 5px 10px #888888;
+
+    &:hover{
+        background:linear-gradient(to bottom right, hsl(317, 100%, 77%),hsl(267, 66%, 65%));
+        box-shadow: 5px 5px 10px #A0A0A0
+    }
+}
+
 main{
     @extend %column;
     .howto{

@@ -19,4 +19,23 @@ header .banner, header .place, header .about {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.submit {
+  border-radius: 25px;
+  padding: 20px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 10px #888888;
+          box-shadow: 5px 5px 10px #888888;
+}
+
+.submit:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
+  background: linear-gradient(to bottom right, #ff8ade, #a06be1);
+  -webkit-box-shadow: 5px 5px 10px #A0A0A0;
+          box-shadow: 5px 5px 10px #A0A0A0;
+}
 /*# sourceMappingURL=style.css.map */
