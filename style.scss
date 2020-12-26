@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
+
 %column {
 	display: flex;
 	flex-direction: column;
@@ -9,6 +12,25 @@
 
 %center {
     align-items: center;
+}
+
+%logofont {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.5rem;
+}
+
+$thin: 100;
+$bold: 700;
+
+@mixin font($size : 1rem, $weight: $thin){
+    font-size: $size;
+    font-weight: $weight;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin:0;
+    padding:0;
 }
 
 body{
@@ -24,10 +46,34 @@ header{
     .place{
         @extend %column;
         @extend %center;
+        background-color: #e9e9e9;
+        padding:.6rem;
     }
     .about{
         @extend %column;
         @extend %center;
+    }
+}
+
+.banner{
+    width:100vw;
+    box-shadow: 0 0 6px #888888;
+    z-index:1;
+    padding:1rem;
+
+    &__logo{
+        width:50vw;
+        height:auto;
+    }
+
+}
+
+.about{
+    h1{
+        @include font(1.5rem, $bold);
+    }
+    h2{
+        @include font(1.5rem, $thin);
     }
 }
 
