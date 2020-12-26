@@ -22,7 +22,11 @@
 $thin: 100;
 $bold: 700;
 
-@mixin font($size : 1rem, $weight: $thin){
+$primary:#9356DC;
+$secondary:#FF79DA;
+$tertiary: #99E2D0;
+
+@mixin font($size : .6rem, $weight: $thin){
     font-size: $size;
     font-weight: $weight;
     font-family: 'Roboto', sans-serif;
@@ -70,17 +74,17 @@ header{
 
 .about{
     h1{
-        @include font(1.5rem, $bold);
+        @include font(1.3rem, $bold);
     }
     h2{
-        @include font(1.5rem, $thin);
+        @include font(1rem, $thin);
     }
 }
 
 .submit{
     border-radius:25px;
     padding:20px;
-    background:linear-gradient(to bottom right, #FF79DA,#9356DC);
+    background:linear-gradient(to bottom right, $secondary, $primary);
     color:white;
     border:none; cursor:pointer;
     box-shadow: 5px 5px 10px #888888;
