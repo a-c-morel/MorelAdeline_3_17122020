@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh My Food</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/36462bbf07.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -20,14 +21,14 @@
         </nav>
         
         <section class="place">
-            <i></i> <!--for the icon fontAwesome-->
+            <i class="fas fa-map-marker-alt place__icon"></i>
             <p>Paris, Belleville</p>
         </section>
 
         <section class="about">
             <h1>Réservez le menu qui vous convient</h1>
             <h2>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>
-            <a href=""><button class="submit">Explorer nos restaurants</button></a>
+            <button type="submit" formaction="#.php" class="submit">Explorer nos restaurants</button>
         </section>
 
     </header>
@@ -39,20 +40,22 @@
 
             <h1>Fonctionnement</h1>
 
-            <article class="step">
-                <i></i> <!--for the icon fontAwesome-->
-                <p class="step__info">Choisissez un restaurant</p>
-            </article>
-
-            <article class="step">
-                <i></i> <!--for the icon fontAwesome-->
-                <p class="step__info">Composez votre menu</p>
-            </article>
-
-            <article class="step">
-                <i></i> <!--for the icon fontAwesome-->
-                <p class="step__info">Dégustez au restaurant</p>
-            </article>
+            <div class="container">
+                <article class="step">
+                    <i></i> <!--for the icon fontAwesome-->
+                    <p class="step__info">Choisissez un restaurant</p>
+                </article>
+    
+                <article class="step">
+                    <i></i> <!--for the icon fontAwesome-->
+                    <p class="step__info">Composez votre menu</p>
+                </article>
+    
+                <article class="step">
+                    <i></i> <!--for the icon fontAwesome-->
+                    <p class="step__info">Dégustez au restaurant</p>
+                </article>
+            </div>
 
         </section>
 
