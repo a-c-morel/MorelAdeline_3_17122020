@@ -1,0 +1,9 @@
+@mixin font($size : .6rem, $weight: $thin){
+    font-size: $size;
+    font-weight: $weight;
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin shadow($boxshadow : 5px 5px 10px $shadow){
+    box-shadow: $boxshadow;
+}

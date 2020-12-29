@@ -1,0 +1,17 @@
+%column {
+	display: flex;
+	flex-direction: column;
+}
+
+%flexstart {
+	align-items: flex-start;
+}
+
+%center {
+    align-items: center;
+}
+
+%logofont {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.5rem;
+}
