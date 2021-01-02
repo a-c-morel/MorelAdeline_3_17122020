@@ -19,6 +19,7 @@ img{
 
 header{
     @extend %column;
+    
     .banner{
         @extend %column;
         @extend %center;
@@ -61,7 +62,6 @@ header{
 }
 
 .about{
-
     background-color: $lightbackground;
 
     h1{
@@ -71,6 +71,7 @@ header{
         padding-right: 2rem;
         text-align: center;
     }
+
     h2{
         @include font(1rem, $thin);
         margin-top: 1rem;
@@ -82,11 +83,12 @@ header{
 }
 
 .submit{
-    border-radius:25px;
-    padding:20px;
+    border-radius:30px;
+    padding: 1.2rem;
     background:linear-gradient(to bottom right, $secondary, $primary);
     color:white;
     border:none; cursor:pointer;
+    @include font(1rem, $bold);
     @include shadow;
     margin-bottom: 3rem;
 
@@ -97,8 +99,8 @@ header{
 }
 
 main{
-
     @extend %column;
+    
     .howto{
         @extend %column;
         @extend %flexstart;
@@ -106,6 +108,7 @@ main{
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
     .restaurants{
         @extend %column;
         @extend %flexstart;
@@ -165,12 +168,10 @@ main{
 
         &--color{
             color: $primary;
-            font-weight: bold;
-            font-size: 1.3rem;
         }
     }
 
-    &:last-child{
+    &--color{
         background-color: lighten($primary, 33);
     }
 
@@ -189,11 +190,36 @@ main{
     @extend %column;
     align-self: center;
     width: 90%;
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+    @include shadow(5px 5px 13px rgb(194, 192, 192));
 
     &__img{
         width: 100%;
-    }
+        height: 170px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
 
+        &--1{
+            background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-size: cover;
+        }
+
+        &--2{
+            background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+            background-size: cover;
+        }
+
+        &--3{
+            background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+            background-size: cover;
+        }
+
+        &--4{
+            background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+            background-size: cover;
+        }
+    }
 }
 
 
