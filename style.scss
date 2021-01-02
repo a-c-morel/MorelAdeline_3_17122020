@@ -220,6 +220,27 @@ main{
             background-size: cover;
         }
     }
+
+    &__info{
+
+        display: flex;
+        justify-content: space-between;
+        padding: .6rem;
+        padding-left: 1rem;
+        
+        h2{
+            @include font(1rem, $bold);
+        }
+
+        p{
+            @include font(1rem, $thin);
+        }
+    }
+
+    &__like{
+        font-size: 1.5rem;
+        color: gray;
+    }
 }
 
 
