@@ -206,6 +206,23 @@ main .restaurants {
   margin-bottom: 1.5rem;
   -webkit-box-shadow: 5px 5px 13px #c2c0c0;
           box-shadow: 5px 5px 13px #c2c0c0;
+  position: relative;
+}
+
+.card--new:after {
+  content: 'Nouveau';
+  padding: .4rem;
+  padding-left: .7rem;
+  padding-right: .7rem;
+  background-color: #99E2D0;
+  color: #10725a;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card__img {

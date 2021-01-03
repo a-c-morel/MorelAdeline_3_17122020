@@ -193,6 +193,25 @@ main{
     border-radius: 25px;
     margin-bottom: 1.5rem;
     @include shadow(5px 5px 13px rgb(194, 192, 192));
+    position: relative;
+
+    &--new{
+
+        &:after{
+            content: 'Nouveau';
+            padding: .4rem;
+            padding-left: .7rem;
+            padding-right: .7rem;
+            background-color: $tertiary;
+            color: #10725a;
+            position: absolute;
+            top : 1rem;
+            right: 1rem;
+            border-radius: 5px;
+            @include font(.8rem, $bold);
+        }
+        
+    }
 
     &__img{
         width: 100%;
