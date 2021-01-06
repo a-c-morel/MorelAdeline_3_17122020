@@ -260,8 +260,11 @@ main{
 
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: .6rem;
         padding-left: 1rem;
+        padding-right: 1rem;
+        position: relative;
         
         h2{
             @include font(1rem, $bold);
@@ -270,13 +273,30 @@ main{
         p{
             @include font(1rem, $thin);
         }
+
     }
 
     &__like{
         font-size: 1.5rem;
-        color: gray;
+        color: rgb(65, 65, 65);
+        z-index: 1;
+
+        &:hover{
+            
+            &:after{
+            content: '❤︎';
+            position: absolute;
+            right: .9rem;
+            top: .9rem;
+            font-size: 1.7rem;
+            color:#ff79d923;
+            z-index: 0;
+            }
+        }
     }
 }
+/*IDEES ANIMATION*/
+/*1. peut-être un coeur qui se remplit à partir du milieu, en augmentant la taille du content et l'opacité progressivement.*/
 
 .footer{
 
