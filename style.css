@@ -301,24 +301,167 @@ main .restaurants {
   font-family: 'Roboto', sans-serif;
 }
 
-.card__like {
-  font-size: 1.5rem;
-  color: #414141;
-  z-index: 1;
-}
-
-.card__like:hover:after {
-  content: '❤︎';
+.like {
   position: absolute;
-  right: .9rem;
-  top: .9rem;
-  font-size: 1.7rem;
-  color: #ff79d923;
-  z-index: 0;
+  right: 1rem;
+  top: .4rem;
 }
 
-/*IDEES ANIMATION*/
-/*1. peut-être un coeur qui se remplit à partir du milieu, en augmentant la taille du content et l'opacité progressivement.*/
+.like:after {
+  content: '❤︎';
+  font-family: "Font Awesome 5 Free";
+  font-size: 2rem;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1.1px black;
+  cursor: pointer;
+}
+
+#heart1:checked ~ .like::after,
+#heart2:checked ~ .like::after,
+#heart3:checked ~ .like::after,
+#heart4:checked ~ .like::after {
+  -webkit-animation: like .4s;
+          animation: like .4s;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: #362307;
+  background: #FF79DA;
+  background-size: auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+}
+
+input {
+  display: none;
+}
+
+@-webkit-keyframes like {
+  0% {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #362307;
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(3%, #FF79DA), color-stop(7%, #fff));
+    background: linear-gradient(to top, #FF79DA 3%, #fff 7%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+  25% {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #362307;
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(21%, #FF79DA), color-stop(25%, #fff));
+    background: linear-gradient(to top, #FF79DA 21%, #fff 25%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+  50% {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #362307;
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(46%, #FF79DA), color-stop(50%, #fff));
+    background: linear-gradient(to top, #FF79DA 46%, #fff 50%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+  75% {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #362307;
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(71%, #FF79DA), color-stop(75%, #fff));
+    background: linear-gradient(to top, #FF79DA 71%, #fff 75%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+  100% {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #362307;
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(100%, #FF79DA), to(#fff));
+    background: linear-gradient(to top, #FF79DA 100%, #fff 100%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+}
+
+@keyframes like {
+  0% {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #362307;
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(3%, #FF79DA), color-stop(7%, #fff));
+    background: linear-gradient(to top, #FF79DA 3%, #fff 7%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+  25% {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #362307;
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(21%, #FF79DA), color-stop(25%, #fff));
+    background: linear-gradient(to top, #FF79DA 21%, #fff 25%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+  50% {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #362307;
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(46%, #FF79DA), color-stop(50%, #fff));
+    background: linear-gradient(to top, #FF79DA 46%, #fff 50%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+  75% {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #362307;
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(71%, #FF79DA), color-stop(75%, #fff));
+    background: linear-gradient(to top, #FF79DA 71%, #fff 75%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+  100% {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #362307;
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(100%, #FF79DA), to(#fff));
+    background: linear-gradient(to top, #FF79DA 100%, #fff 100%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+}
+
 .footer {
   padding: 2rem;
   background-color: #353535;

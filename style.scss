@@ -273,30 +273,66 @@ main{
         p{
             @include font(1rem, $thin);
         }
-
-    }
-
-    &__like{
-        font-size: 1.5rem;
-        color: rgb(65, 65, 65);
-        z-index: 1;
-
-        &:hover{
-            
-            &:after{
-            content: '❤︎';
-            position: absolute;
-            right: .9rem;
-            top: .9rem;
-            font-size: 1.7rem;
-            color:#ff79d923;
-            z-index: 0;
-            }
-        }
     }
 }
-/*IDEES ANIMATION*/
-/*1. peut-être un coeur qui se remplit à partir du milieu, en augmentant la taille du content et l'opacité progressivement.*/
+
+.like{
+    position: absolute;
+    right: 1rem;
+    top: .4rem;
+    &:after{
+    content: '❤︎';
+    font-family: "Font Awesome 5 Free";
+    font-size: 2rem;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1.1px black;
+    cursor: pointer;
+    }
+  }
+  
+  #heart1:checked ~ .like::after,
+  #heart2:checked ~ .like::after,
+  #heart3:checked ~ .like::after,
+  #heart4:checked ~ .like::after{
+    animation: like .4s;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(54,35,7);
+    background: $secondary;
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+  }
+  
+  input{
+    display: none;
+  }
+  
+  @keyframes like{
+    
+    0%{
+      @include linear-gradient(3%, 7%);
+    }
+    
+    25%{
+      @include linear-gradient(21%, 25%);
+    }
+    
+    50%{
+      @include linear-gradient(46%, 50%);
+    }
+    
+    75%{
+      @include linear-gradient(71%, 75%);
+    }
+    
+    100%{
+      @include linear-gradient(100%, 100%);
+    }
+    
+  }
+
 
 .footer{
 
