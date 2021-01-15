@@ -30,8 +30,9 @@ header{
     @extend %column;
     
     .banner{
-        @extend %column;
-        @extend %center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .place{
@@ -52,11 +53,28 @@ header{
     padding:1rem;
 
     &__logo{
-        width:50vw;
-        height:auto;
+        width: 10rem;
+        height: auto;
+    }
+
+    &--menu{
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__back-button{
+        width: 3rem;
     }
 
 }
+
+.flex-logo{
+    display: flex;
+}
+
+
 
 .place{
     background-color: #e9e9e9;
@@ -340,3 +358,24 @@ input{
 }
 
 
+.main-menu{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: -45px;
+    z-index: 2;
+    background: #f6f6f6;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    h1{
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.8rem;
+    }
+
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+}

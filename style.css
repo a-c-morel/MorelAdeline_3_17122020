@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap");
-body, header, header .banner, header .about, main, main .howto, main .restaurants, .container, .card {
+body, header, header .about, main, main .howto, main .restaurants, .container, .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,7 +16,7 @@ main .howto, main .restaurants {
           align-items: flex-start;
 }
 
-header .banner, header .place, header .about, .container {
+header .place, header .about, .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -26,11 +26,6 @@ footer {
   padding: 2rem;
   background-color: #353535;
   color: white;
-}
-
-footer__logo {
-  font-family: 'Shrikhand', cursive;
-  font-size: 1.2rem;
 }
 
 footer ul {
@@ -46,6 +41,12 @@ footer ul li {
 
 footer ul li .icon {
   margin-right: .5rem;
+}
+
+.footer__logo {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.2rem;
+  color: white;
 }
 
 * {
@@ -70,6 +71,18 @@ ul {
   list-style-type: none;
 }
 
+header .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header .place {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,8 +100,30 @@ header .place {
 }
 
 .banner__logo {
-  width: 50vw;
+  width: 10rem;
   height: auto;
+}
+
+.banner--menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.banner__back-button {
+  width: 3rem;
+}
+
+.flex-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .place {
@@ -465,5 +500,33 @@ input {
     -webkit-background-clip: text;
     color: transparent;
   }
+}
+
+.main-menu {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -45px;
+  z-index: 2;
+  background: #f6f6f6;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.main-menu h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.8rem;
+}
+
+.main-menu__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
