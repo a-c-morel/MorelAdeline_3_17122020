@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap");
 body, header, header .banner, header .about, main, main .howto, main .restaurants, .container, .card {
@@ -21,6 +20,32 @@ header .banner, header .place, header .about, .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer {
+  padding: 2rem;
+  background-color: #353535;
+  color: white;
+}
+
+footer__logo {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.2rem;
+}
+
+footer ul {
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 1rem;
+}
+
+footer ul li {
+  margin-bottom: .4rem;
+}
+
+footer ul li .icon {
+  margin-right: .5rem;
 }
 
 * {
@@ -286,7 +311,7 @@ main .restaurants {
   padding: .6rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  position: relative;
+  /*position: relative;*/
 }
 
 .card__info h2 {
@@ -301,35 +326,45 @@ main .restaurants {
   font-family: 'Roboto', sans-serif;
 }
 
-.like {
-  position: absolute;
-  right: 1rem;
-  top: .4rem;
-}
-
-.like:after {
-  content: '❤︎';
-  font-family: "Font Awesome 5 Free";
-  font-size: 2rem;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1.1px black;
+label {
   cursor: pointer;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
 }
 
-#heart1:checked ~ .like::after,
-#heart2:checked ~ .like::after,
-#heart3:checked ~ .like::after,
-#heart4:checked ~ .like::after {
+#heart1:checked ~ label,
+#heart2:checked ~ label,
+#heart3:checked ~ label,
+#heart4:checked ~ label {
   -webkit-animation: like .4s;
           animation: like .4s;
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: #362307;
-  background: #FF79DA;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(96%, #FF79DA), color-stop(96%, #fff));
+  background: linear-gradient(to top, #FF79DA 96%, #fff 96%);
   background-size: auto;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
+}
+
+label {
+  position: relative;
+}
+
+label:after {
+  content: '\f004';
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.6rem;
+  color: white;
+  background: #393939;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: -1px;
+  top: -2px;
 }
 
 input {
@@ -338,56 +373,42 @@ input {
 
 @-webkit-keyframes like {
   0% {
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #362307;
     background: #FF79DA;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(3%, #FF79DA), color-stop(7%, #fff));
-    background: linear-gradient(to top, #FF79DA 3%, #fff 7%);
+    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(0%, #fff));
+    background: linear-gradient(to top, #FF79DA 0%, #fff 0%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
   25% {
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #362307;
     background: #FF79DA;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(21%, #FF79DA), color-stop(25%, #fff));
-    background: linear-gradient(to top, #FF79DA 21%, #fff 25%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #FF79DA), color-stop(25%, #fff));
+    background: linear-gradient(to top, #FF79DA 25%, #fff 25%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
   50% {
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #362307;
     background: #FF79DA;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(46%, #FF79DA), color-stop(50%, #fff));
-    background: linear-gradient(to top, #FF79DA 46%, #fff 50%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #FF79DA), color-stop(50%, #fff));
+    background: linear-gradient(to top, #FF79DA 50%, #fff 50%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
   75% {
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #362307;
     background: #FF79DA;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(71%, #FF79DA), color-stop(75%, #fff));
-    background: linear-gradient(to top, #FF79DA 71%, #fff 75%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #FF79DA), color-stop(75%, #fff));
+    background: linear-gradient(to top, #FF79DA 75%, #fff 75%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
   100% {
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #362307;
     background: #FF79DA;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(100%, #FF79DA), to(#fff));
     background: linear-gradient(to top, #FF79DA 100%, #fff 100%);
@@ -395,62 +416,47 @@ input {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
 }
 
 @keyframes like {
   0% {
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #362307;
     background: #FF79DA;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(3%, #FF79DA), color-stop(7%, #fff));
-    background: linear-gradient(to top, #FF79DA 3%, #fff 7%);
+    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(0%, #fff));
+    background: linear-gradient(to top, #FF79DA 0%, #fff 0%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
   25% {
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #362307;
     background: #FF79DA;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(21%, #FF79DA), color-stop(25%, #fff));
-    background: linear-gradient(to top, #FF79DA 21%, #fff 25%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #FF79DA), color-stop(25%, #fff));
+    background: linear-gradient(to top, #FF79DA 25%, #fff 25%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
   50% {
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #362307;
     background: #FF79DA;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(46%, #FF79DA), color-stop(50%, #fff));
-    background: linear-gradient(to top, #FF79DA 46%, #fff 50%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #FF79DA), color-stop(50%, #fff));
+    background: linear-gradient(to top, #FF79DA 50%, #fff 50%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
   75% {
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #362307;
     background: #FF79DA;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(71%, #FF79DA), color-stop(75%, #fff));
-    background: linear-gradient(to top, #FF79DA 71%, #fff 75%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #FF79DA), color-stop(75%, #fff));
+    background: linear-gradient(to top, #FF79DA 75%, #fff 75%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
   100% {
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #362307;
     background: #FF79DA;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(100%, #FF79DA), to(#fff));
     background: linear-gradient(to top, #FF79DA 100%, #fff 100%);
@@ -458,33 +464,6 @@ input {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
-}
-
-.footer {
-  padding: 2rem;
-  background-color: #353535;
-  color: white;
-}
-
-.footer__logo {
-  font-family: 'Shrikhand', cursive;
-  font-size: 1.2rem;
-}
-
-.footer ul {
-  font-size: 0.9rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-  margin-top: 1rem;
-}
-
-.footer ul li {
-  margin-bottom: .4rem;
-}
-
-.footer ul li .icon {
-  margin-right: .5rem;
 }
 /*# sourceMappingURL=style.css.map */

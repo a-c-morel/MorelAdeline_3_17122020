@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap'), url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap'), 'variables', 'extensions', 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap'), url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap'), 'variables', 'extensions', 'mixins', 'footer';
 
 * {
     margin:0;
@@ -264,7 +264,7 @@ main{
         padding: .6rem;
         padding-left: 1rem;
         padding-right: 1rem;
-        position: relative;
+        /*position: relative;*/
         
         h2{
             @include font(1rem, $bold);
@@ -276,88 +276,67 @@ main{
     }
 }
 
-.like{
-    position: absolute;
-    right: 1rem;
-    top: .4rem;
-    &:after{
-    content: '❤︎';
-    font-family: "Font Awesome 5 Free";
-    font-size: 2rem;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1.1px black;
+label{
     cursor: pointer;
-    }
+    background: white;
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
+    font-size: 1.5rem;
   }
   
-  #heart1:checked ~ .like::after,
-  #heart2:checked ~ .like::after,
-  #heart3:checked ~ .like::after,
-  #heart4:checked ~ .like::after{
+#heart1:checked ~ label,
+#heart2:checked ~ label,
+#heart3:checked ~ label,
+#heart4:checked ~ label{
     animation: like .4s;
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: rgb(54,35,7);
-    background: $secondary;
+    animation-timing-function: linear;
+    background: linear-gradient(to top, $secondary 96%, #fff 96%);
     background-size: auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
   }
   
-  input{
+label{
+    position: relative;
+    &:after{
+    content: '\f004';
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.6rem;
+    color: white;
+    background: #393939;
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
+    position: absolute;
+    left: -1px;
+    top: -2px;
+    }
+}
+  
+input{
     display: none;
-  }
+}
   
-  @keyframes like{
-    
+@keyframes like{
     0%{
-      @include linear-gradient(3%, 7%);
+      @include linear-gradient(0%, 0%);
     }
     
     25%{
-      @include linear-gradient(21%, 25%);
+      @include linear-gradient(25%, 25%);
     }
     
     50%{
-      @include linear-gradient(46%, 50%);
+      @include linear-gradient(50%, 50%);
     }
     
     75%{
-      @include linear-gradient(71%, 75%);
+      @include linear-gradient(75%, 75%);
     }
     
     100%{
       @include linear-gradient(100%, 100%);
-    }
-    
-  }
-
-
-.footer{
-
-    padding: 2rem;
-    background-color:#353535;
-    color: white;
-
-    &__logo{
-        font-family: 'Shrikhand', cursive;
-        font-size: 1.2rem;
-    }
-
-    ul{
-        @include font(.9rem, $bold);
-        margin-top: 1rem;
-
-        li{
-            margin-bottom: .4rem;
-
-            .icon{
-                margin-right: .5rem;
-            }
-
-        }
-    }
-
+    } 
 }
+
 

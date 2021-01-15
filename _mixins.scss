@@ -9,13 +9,10 @@
 }
 
 @mixin linear-gradient($percentage-color1, $percentage-color2){
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: rgb(54,35,7);
-    background: $secondary;
+  background: $secondary;
   background: linear-gradient(to top, $secondary $percentage-color1, #fff $percentage-color2);
-    background-size: auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent, 0 -1.1px transparent;
-  }
+  background-size: auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
