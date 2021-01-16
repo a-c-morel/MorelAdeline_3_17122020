@@ -110,23 +110,12 @@ header{
         text-align: center;
         margin-bottom: 3rem;
     }
-}
 
-.submit{
-    border-radius:30px;
-    padding: 1.2rem;
-    background:linear-gradient(to bottom right, $secondary, $primary);
-    color:white;
-    border:none; cursor:pointer;
-    @include font(1rem, $bold);
-    @include shadow;
-    margin-bottom: 3rem;
-
-    &:hover{
-        background:linear-gradient(to bottom right, hsl(317, 100%, 77%),hsl(267, 66%, 65%));
-        @include shadow(5px 5px 10px $shadowhover);
+    .explore{
+        @extend %submit;
     }
 }
+
 
 main{
     @extend %column;
@@ -305,7 +294,9 @@ label{
 #heart1:checked ~ label,
 #heart2:checked ~ label,
 #heart3:checked ~ label,
-#heart4:checked ~ label{
+#heart4:checked ~ label,
+#heart-menu-3:checked ~ label
+{
     animation: like .4s;
     animation-timing-function: linear;
     background: linear-gradient(to top, $secondary 96%, #fff 96%);
@@ -378,4 +369,16 @@ input{
         align-items: center;
         margin-top: 2rem;
     }
+}
+
+.starters,
+.dishes,
+.desserts{
+    &__title{
+    @extend %uppercase;
+    }
+}
+
+.submit__order{
+    @extend %submit;
 }

@@ -22,10 +22,43 @@ header .place, header .about, .container {
           align-items: center;
 }
 
+.starters__title,
+.dishes__title,
+.desserts__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.about .explore, .submit__order {
+  border-radius: 30px;
+  padding: 1.2rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-shadow: 5px 5px 10px #888888;
+          box-shadow: 5px 5px 10px #888888;
+  margin-bottom: 3rem;
+}
+
+.about .explore:hover, .submit__order:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
+  background: linear-gradient(to bottom right, #ff8ade, #a06be1);
+  -webkit-box-shadow: 5px 5px 10px #A0A0A0;
+          box-shadow: 5px 5px 10px #A0A0A0;
+}
+
 footer {
-  padding: 2rem;
   background-color: #353535;
   color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 footer ul {
@@ -33,6 +66,7 @@ footer ul {
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
   margin-top: 1rem;
+  margin-left: 2rem;
 }
 
 footer ul li {
@@ -40,13 +74,14 @@ footer ul li {
 }
 
 footer ul li .icon {
-  margin-right: .5rem;
+  padding-right: .5rem;
 }
 
 .footer__logo {
   font-family: 'Shrikhand', cursive;
   font-size: 1.2rem;
   color: white;
+  margin-left: 2rem;
 }
 
 * {
@@ -165,29 +200,6 @@ header .place {
   padding-right: 1.1rem;
   text-align: center;
   margin-bottom: 3rem;
-}
-
-.submit {
-  border-radius: 30px;
-  padding: 1.2rem;
-  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-  -webkit-box-shadow: 5px 5px 10px #888888;
-          box-shadow: 5px 5px 10px #888888;
-  margin-bottom: 3rem;
-}
-
-.submit:hover {
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
-  background: linear-gradient(to bottom right, #ff8ade, #a06be1);
-  -webkit-box-shadow: 5px 5px 10px #A0A0A0;
-          box-shadow: 5px 5px 10px #A0A0A0;
 }
 
 main .howto {
@@ -372,7 +384,8 @@ label {
 #heart1:checked ~ label,
 #heart2:checked ~ label,
 #heart3:checked ~ label,
-#heart4:checked ~ label {
+#heart4:checked ~ label,
+#heart-menu-3:checked ~ label {
   -webkit-animation: like .4s;
           animation: like .4s;
   -webkit-animation-timing-function: linear;
