@@ -376,9 +376,45 @@ input{
 .desserts{
     &__title{
     @extend %uppercase;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    position: relative;
+    &:after{
+        content:'';
+        height: 3px;
+        width: 2.5rem;
+        background: $tertiary;
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+    }
+    }
+}
+
+.dish-select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include shadow(1px 1px 10px #88888883);
+    padding: 1rem;
+    margin-bottom: 1.4rem;
+    border-radius: 20px;
+
+    &__info{
+        h3{@include font(1.2rem, $bold);}
+        p{@include font(1rem, $thin);}
+    }
+
+    &__price{
+        align-self: flex-end;
+        @include font(1rem, $bold);
     }
 }
 
 .submit__order{
     @extend %submit;
+    align-self: center;
+    width: 12rem;
+    margin-top: 2rem;
 }
