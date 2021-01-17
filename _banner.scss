@@ -1,0 +1,22 @@
+.banner{
+    box-shadow: 0 0 6px #888888;
+    z-index:1;
+    padding:1rem;
+
+    &__logo{
+        width: 10rem;
+        height: auto;
+    }
+
+    &--menu{
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__back-button{
+        width: 3rem;
+    }
+
+}

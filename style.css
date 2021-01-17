@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap");
-body, header, header .about, main, main .howto, main .restaurants, .container, .card {
+/*FONT WEIGHTS*/
+/*COLOURS*/
+/*FLEX BEHAVIORS*/
+.card, body, header, header .about, main, main .howto, main .restaurants, .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,6 +25,7 @@ header .place, header .about, .container {
           align-items: center;
 }
 
+/*FONTS*/
 .starters__title,
 .dishes__title,
 .desserts__title {
@@ -31,7 +35,8 @@ header .place, header .about, .container {
   text-transform: uppercase;
 }
 
-.about .explore, .submit__order {
+/*BUTTONS*/
+.submit__order, .about .explore {
   border-radius: 30px;
   padding: 1.2rem;
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
@@ -47,7 +52,7 @@ header .place, header .about, .container {
   margin-bottom: 3rem;
 }
 
-.about .explore:hover, .submit__order:hover {
+.submit__order:hover, .about .explore:hover {
   background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
   background: linear-gradient(to bottom right, #ff8ade, #a06be1);
   -webkit-box-shadow: 5px 5px 10px #A0A0A0;
@@ -84,295 +89,7 @@ footer ul li .icon {
   margin-left: 2rem;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style-type: none;
-}
-
-header .banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header .place {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.banner {
-  -webkit-box-shadow: 0 0 6px #888888;
-          box-shadow: 0 0 6px #888888;
-  z-index: 1;
-  padding: 1rem;
-}
-
-.banner__logo {
-  width: 10rem;
-  height: auto;
-}
-
-.banner--menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.banner__back-button {
-  width: 3rem;
-}
-
-.flex-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.place {
-  background-color: #e9e9e9;
-  padding: .6rem;
-  color: rgba(0, 0, 0, 0.658);
-}
-
-.place h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.place__icon {
-  margin-right: 1rem;
-}
-
-.about {
-  background-color: #f7f7f7;
-}
-
-.about h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-  margin-top: 3rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 1rem;
-  font-weight: 100;
-  font-family: 'Roboto', sans-serif;
-  margin-top: 1rem;
-  padding-left: 1.1rem;
-  padding-right: 1.1rem;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-main .howto {
-  margin-bottom: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-main .restaurants {
-  background-color: #f7f7f7;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 3rem;
-}
-
-.howto h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 1.5rem;
-  margin-top: 3rem;
-}
-
-.container {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  counter-reset: stepnumber;
-}
-
-.step {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: #f7f7f7;
-  padding: 1.5rem;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 1rem;
-  border-radius: 20px;
-  -webkit-box-shadow: 5px 5px 13px #c2c0c0;
-          box-shadow: 5px 5px 13px #c2c0c0;
-  position: relative;
-}
-
-.step h3 {
-  font-size: 0.9rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.step:before {
-  content: counter(stepnumber);
-  counter-increment: stepnumber;
-  background-color: #9356DC;
-  padding-top: .4rem;
-  padding-bottom: .4rem;
-  padding-left: .6rem;
-  padding-right: .6rem;
-  border-radius: 50%;
-  color: white;
-  font-size: .7rem;
-  position: absolute;
-  left: -10px;
-}
-
-.step__icon {
-  color: rgba(0, 0, 0, 0.637);
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-
-.step__icon--color {
-  color: #9356DC;
-}
-
-.step--color {
-  background-color: #ece1f9;
-}
-
-.restaurants h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 1.5rem;
-  margin-top: 3rem;
-}
-
-.card {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  width: 90%;
-  border-radius: 25px;
-  margin-bottom: 1.5rem;
-  -webkit-box-shadow: 5px 5px 13px #c2c0c0;
-          box-shadow: 5px 5px 13px #c2c0c0;
-  position: relative;
-}
-
-.card--new:after {
-  content: 'Nouveau';
-  padding: .4rem;
-  padding-left: .7rem;
-  padding-right: .7rem;
-  background-color: #99E2D0;
-  color: #10725a;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.card__img {
-  width: 100%;
-  height: 170px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
-
-.card__img--1 {
-  background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-  background-size: cover;
-}
-
-.card__img--2 {
-  background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-  background-size: cover;
-}
-
-.card__img--3 {
-  background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  background-size: cover;
-}
-
-.card__img--4 {
-  background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  background-size: cover;
-}
-
-.card__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: .6rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  /*position: relative;*/
-}
-
-.card__info h2 {
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.card__info p {
-  font-size: 1rem;
-  font-weight: 100;
-  font-family: 'Roboto', sans-serif;
-}
-
+/*HEART ANIMATION*/
 label {
   cursor: pointer;
   background: white;
@@ -515,6 +232,64 @@ input {
   }
 }
 
+/*FLEX BEHAVIORS*/
+.card, body, header, header .about, main, main .howto, main .restaurants, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .howto, main .restaurants {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .place, header .about, .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*FONTS*/
+.starters__title,
+.dishes__title,
+.desserts__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+/*BUTTONS*/
+.submit__order, .about .explore {
+  border-radius: 30px;
+  padding: 1.2rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-shadow: 5px 5px 10px #888888;
+          box-shadow: 5px 5px 10px #888888;
+  margin-bottom: 3rem;
+}
+
+.submit__order:hover, .about .explore:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
+  background: linear-gradient(to bottom right, #ff8ade, #a06be1);
+  -webkit-box-shadow: 5px 5px 10px #A0A0A0;
+          box-shadow: 5px 5px 10px #A0A0A0;
+}
+
+/*MENUS*/
 .main-menu {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -607,5 +382,351 @@ input {
       align-self: center;
   width: 12rem;
   margin-top: 2rem;
+}
+
+/*FLEX BEHAVIORS*/
+.card, body, header, header .about, main, main .howto, main .restaurants, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .howto, main .restaurants {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .place, header .about, .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*FONTS*/
+.starters__title,
+.dishes__title,
+.desserts__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+/*BUTTONS*/
+.submit__order, .about .explore {
+  border-radius: 30px;
+  padding: 1.2rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-shadow: 5px 5px 10px #888888;
+          box-shadow: 5px 5px 10px #888888;
+  margin-bottom: 3rem;
+}
+
+.submit__order:hover, .about .explore:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
+  background: linear-gradient(to bottom right, #ff8ade, #a06be1);
+  -webkit-box-shadow: 5px 5px 10px #A0A0A0;
+          box-shadow: 5px 5px 10px #A0A0A0;
+}
+
+.card {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 90%;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+  -webkit-box-shadow: 5px 5px 13px #c2c0c0;
+          box-shadow: 5px 5px 13px #c2c0c0;
+  position: relative;
+}
+
+.card--new:after {
+  content: 'Nouveau';
+  padding: .4rem;
+  padding-left: .7rem;
+  padding-right: .7rem;
+  background-color: #99E2D0;
+  color: #10725a;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card__img {
+  width: 100%;
+  height: 170px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.card__img--1 {
+  background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
+}
+
+.card__img--2 {
+  background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-size: cover;
+}
+
+.card__img--3 {
+  background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: cover;
+}
+
+.card__img--4 {
+  background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-size: cover;
+}
+
+.card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /*position: relative;*/
+}
+
+.card__info h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card__info p {
+  font-size: 1rem;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+}
+
+.banner {
+  -webkit-box-shadow: 0 0 6px #888888;
+          box-shadow: 0 0 6px #888888;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.banner__logo {
+  width: 10rem;
+  height: auto;
+}
+
+.banner--menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.banner__back-button {
+  width: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.place {
+  background-color: #e9e9e9;
+  padding: .6rem;
+  color: rgba(0, 0, 0, 0.658);
+}
+
+.place h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.place__icon {
+  margin-right: 1rem;
+}
+
+.about {
+  background-color: #f7f7f7;
+}
+
+.about h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 1rem;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 1rem;
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+main .howto {
+  margin-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+main .restaurants {
+  background-color: #f7f7f7;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+}
+
+.howto h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+
+.container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  counter-reset: stepnumber;
+}
+
+.step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #f7f7f7;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 13px #c2c0c0;
+          box-shadow: 5px 5px 13px #c2c0c0;
+  position: relative;
+}
+
+.step h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.step:before {
+  content: counter(stepnumber);
+  counter-increment: stepnumber;
+  background-color: #9356DC;
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+  padding-left: .6rem;
+  padding-right: .6rem;
+  border-radius: 50%;
+  color: white;
+  font-size: .7rem;
+  position: absolute;
+  left: -10px;
+}
+
+.step__icon {
+  color: rgba(0, 0, 0, 0.637);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.step__icon--color {
+  color: #9356DC;
+}
+
+.step--color {
+  background-color: #ece1f9;
+}
+
+.restaurants h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
 }
 /*# sourceMappingURL=style.css.map */

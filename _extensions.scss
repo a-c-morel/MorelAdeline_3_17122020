@@ -1,5 +1,7 @@
 @import 'mixins';
 
+/*FLEX BEHAVIORS*/
+
 %column {
 	display: flex;
 	flex-direction: column;
@@ -13,6 +15,8 @@
     align-items: center;
 }
 
+/*FONTS*/
+
 %logofont {
     font-family: 'Shrikhand', cursive;
     font-size: 1.5rem;
@@ -24,6 +28,8 @@
     font-weight: 100;
     text-transform: uppercase;
 }
+
+/*BUTTONS*/
 
 %submit{
     border-radius:30px;
