@@ -239,8 +239,8 @@ input {
 .loading {
   height: 200vh;
   width: 100%;
-  -webkit-animation: loading_background 2.5s;
-          animation: loading_background 2.5s;
+  -webkit-animation: loading_background 3s;
+          animation: loading_background 3s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   z-index: 2;
@@ -248,17 +248,22 @@ input {
 }
 
 .loading__spinner {
-  -webkit-animation: loading_spinner 2.5s;
-          animation: loading_spinner 2.5s;
+  -webkit-animation: loading_spinner 1s;
+          animation: loading_spinner 1s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
   position: absolute;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
   z-index: 3;
   top: 21vh;
-  left: 45%;
+  left: 48%;
+  will-change: transform;
 }
 
 /*I'll have to be more specific for left-position of the spinner, it has to be perfectly centered.*/
@@ -312,26 +317,15 @@ input {
     border: 8px solid #99E2D0;
     border-bottom-color: #9356DC;
     opacity: 1;
-  }
-  25% {
-    border: 8px solid #99E2D0;
-    border-left-color: #9356DC;
-    opacity: 1;
-  }
-  50% {
-    border: 8px solid #99E2D0;
-    border-top-color: #9356DC;
-    opacity: 1;
-  }
-  75% {
-    border: 8px solid #99E2D0;
-    border-right-color: #9356DC;
-    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
   }
   100% {
     border: 8px solid #99E2D0;
     border-bottom-color: #9356DC;
-    opacity: 0;
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+            transform: translate3d(-50%, -50%, 0) rotate(360deg);
   }
 }
 
@@ -340,26 +334,15 @@ input {
     border: 8px solid #99E2D0;
     border-bottom-color: #9356DC;
     opacity: 1;
-  }
-  25% {
-    border: 8px solid #99E2D0;
-    border-left-color: #9356DC;
-    opacity: 1;
-  }
-  50% {
-    border: 8px solid #99E2D0;
-    border-top-color: #9356DC;
-    opacity: 1;
-  }
-  75% {
-    border: 8px solid #99E2D0;
-    border-right-color: #9356DC;
-    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
   }
   100% {
     border: 8px solid #99E2D0;
     border-bottom-color: #9356DC;
-    opacity: 0;
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+            transform: translate3d(-50%, -50%, 0) rotate(360deg);
   }
 }
 
