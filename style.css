@@ -94,6 +94,7 @@ label {
   cursor: pointer;
   background: white;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
 }
@@ -126,6 +127,7 @@ label:after {
   color: white;
   background: #393939;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
   left: -1px;
@@ -550,6 +552,14 @@ header .place, header .about, .container {
 
 .banner__back-button {
   width: 3rem;
+}
+
+::-moz-selection {
+  background: transparent;
+}
+
+::selection {
+  background: transparent;
 }
 
 * {
