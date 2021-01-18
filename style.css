@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap");
 /*FONT WEIGHTS*/
 /*COLOURS*/
+/*VALUES*/
 /*FLEX BEHAVIORS*/
 .card, body, header, header .about, main, main .howto, main .restaurants, .container {
   display: -webkit-box;
@@ -231,6 +232,134 @@ input {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+  }
+}
+
+/*LOADING SPINNER*/
+.loading {
+  height: 200vh;
+  width: 100%;
+  -webkit-animation: loading_background 2.5s;
+          animation: loading_background 2.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  z-index: 2;
+  position: absolute;
+}
+
+.loading__spinner {
+  -webkit-animation: loading_spinner 2.5s;
+          animation: loading_spinner 2.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+  top: 21vh;
+  left: 45%;
+}
+
+/*I'll have to be more specific for left-position of the spinner, it has to be perfectly centered.*/
+@-webkit-keyframes loading_background {
+  0% {
+    background: black;
+    opacity: 0.7;
+  }
+  25% {
+    background: black;
+    opacity: 0.7;
+  }
+  50% {
+    background: black;
+    opacity: 0.7;
+  }
+  75% {
+    background: black;
+    opacity: 0.7;
+  }
+  100% {
+    background: black;
+    opacity: 0;
+  }
+}
+@keyframes loading_background {
+  0% {
+    background: black;
+    opacity: 0.7;
+  }
+  25% {
+    background: black;
+    opacity: 0.7;
+  }
+  50% {
+    background: black;
+    opacity: 0.7;
+  }
+  75% {
+    background: black;
+    opacity: 0.7;
+  }
+  100% {
+    background: black;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes loading_spinner {
+  0% {
+    border: 8px solid #99E2D0;
+    border-bottom-color: #9356DC;
+    opacity: 1;
+  }
+  25% {
+    border: 8px solid #99E2D0;
+    border-left-color: #9356DC;
+    opacity: 1;
+  }
+  50% {
+    border: 8px solid #99E2D0;
+    border-top-color: #9356DC;
+    opacity: 1;
+  }
+  75% {
+    border: 8px solid #99E2D0;
+    border-right-color: #9356DC;
+    opacity: 1;
+  }
+  100% {
+    border: 8px solid #99E2D0;
+    border-bottom-color: #9356DC;
+    opacity: 0;
+  }
+}
+
+@keyframes loading_spinner {
+  0% {
+    border: 8px solid #99E2D0;
+    border-bottom-color: #9356DC;
+    opacity: 1;
+  }
+  25% {
+    border: 8px solid #99E2D0;
+    border-left-color: #9356DC;
+    opacity: 1;
+  }
+  50% {
+    border: 8px solid #99E2D0;
+    border-top-color: #9356DC;
+    opacity: 1;
+  }
+  75% {
+    border: 8px solid #99E2D0;
+    border-right-color: #9356DC;
+    opacity: 1;
+  }
+  100% {
+    border: 8px solid #99E2D0;
+    border-bottom-color: #9356DC;
+    opacity: 0;
   }
 }
 

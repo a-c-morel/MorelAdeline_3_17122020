@@ -68,3 +68,79 @@ input{
       @include linear-gradient(100%, 100%);
     } 
 }
+
+/*LOADING SPINNER*/
+
+.loading{
+  height: 200vh;
+  width: 100%;
+  animation: loading_background 2.5s;
+  animation-timing-function: ease-in-out;
+  z-index:2;
+  position: absolute;
+
+  &__spinner{
+    animation: loading_spinner 2.5s;
+    animation-timing-function: linear;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    top: 21vh;
+    left: 45%;
+  }
+}
+
+/*I'll have to be more specific for left-position of the spinner, it has to be perfectly centered.*/
+
+@keyframes loading_background{
+  0%{
+    background: rgb(0, 0, 0);
+    opacity: 0.7;
+  }
+  25%{
+    background: rgb(0, 0, 0);
+    opacity: 0.7;
+  }
+  50%{
+    background: rgb(0, 0, 0);
+    opacity: 0.7;
+  }
+  75%{
+    background: rgb(0, 0, 0);
+    opacity: 0.7;
+  }
+  100%{
+    background: rgb(0, 0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes loading_spinner{
+  0%{
+    border: 8px solid $tertiary;
+    border-bottom-color: $primary;
+    opacity: 1;
+  }
+  25%{
+    border: 8px solid $tertiary;
+    border-left-color: $primary;
+    opacity: 1;
+  }
+  50%{
+    border: 8px solid $tertiary;
+    border-top-color: $primary;
+    opacity: 1;
+  }
+  75%{
+    border: 8px solid $tertiary;
+    border-right-color: $primary;
+    opacity: 1;
+  }
+  100%{
+    border: 8px solid $tertiary;
+    border-bottom-color: $primary;
+    opacity: 0;
+  }
+}
