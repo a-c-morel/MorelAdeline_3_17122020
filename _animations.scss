@@ -74,15 +74,16 @@ input{
 .loading{
   height: 200vh;
   width: 100%;
-  animation: loading_background 3s;
+  animation: loading_background 2.8s;
   animation-timing-function: ease-in-out;
-  z-index:2;
   position: absolute;
+  z-index: 2;
+  animation-fill-mode: forwards;
 
   &__spinner{
     animation: loading_spinner 1s;
     animation-timing-function: linear;
-    animation-iteration-count: 3;
+    animation-iteration-count: 2;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -100,23 +101,26 @@ input{
 @keyframes loading_background{
   0%{
     background: rgb(0, 0, 0);
-    opacity: 0.7;
+    opacity: 0.8;
   }
   25%{
     background: rgb(0, 0, 0);
-    opacity: 0.7;
+    opacity: 0.8;
   }
   50%{
     background: rgb(0, 0, 0);
     opacity: 0.7;
+    z-index: 1;
   }
   75%{
     background: rgb(0, 0, 0);
-    opacity: 0.7;
+    opacity: 0.4;
+    z-index: 0;
   }
   100%{
     background: rgb(0, 0, 0);
     opacity: 0;
+    z-index: -1;
   }
 }
 

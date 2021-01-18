@@ -239,12 +239,14 @@ input {
 .loading {
   height: 200vh;
   width: 100%;
-  -webkit-animation: loading_background 3s;
-          animation: loading_background 3s;
+  -webkit-animation: loading_background 2.8s;
+          animation: loading_background 2.8s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  z-index: 2;
   position: absolute;
+  z-index: 2;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .loading__spinner {
@@ -252,8 +254,8 @@ input {
           animation: loading_spinner 1s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-iteration-count: 3;
-          animation-iteration-count: 3;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
@@ -270,45 +272,51 @@ input {
 @-webkit-keyframes loading_background {
   0% {
     background: black;
-    opacity: 0.7;
+    opacity: 0.8;
   }
   25% {
     background: black;
-    opacity: 0.7;
+    opacity: 0.8;
   }
   50% {
     background: black;
     opacity: 0.7;
+    z-index: 1;
   }
   75% {
     background: black;
-    opacity: 0.7;
+    opacity: 0.4;
+    z-index: 0;
   }
   100% {
     background: black;
     opacity: 0;
+    z-index: -1;
   }
 }
 @keyframes loading_background {
   0% {
     background: black;
-    opacity: 0.7;
+    opacity: 0.8;
   }
   25% {
     background: black;
-    opacity: 0.7;
+    opacity: 0.8;
   }
   50% {
     background: black;
     opacity: 0.7;
+    z-index: 1;
   }
   75% {
     background: black;
-    opacity: 0.7;
+    opacity: 0.4;
+    z-index: 0;
   }
   100% {
     background: black;
     opacity: 0;
+    z-index: -1;
   }
 }
 
