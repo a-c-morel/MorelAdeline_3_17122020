@@ -2,7 +2,7 @@
 
 /*HEART ANIMATION*/
 
-label{
+.heart-animation{
     cursor: pointer;
     background: white;
     -webkit-background-clip : text;
@@ -11,11 +11,14 @@ label{
     font-size: 1.5rem;
 }
 
-#heart1:checked ~ label,
-#heart2:checked ~ label,
-#heart3:checked ~ label,
-#heart4:checked ~ label,
-#heart-menu-3:checked ~ label
+#heart1:checked ~ .heart-animation,
+#heart2:checked ~ .heart-animation,
+#heart3:checked ~ .heart-animation,
+#heart4:checked ~ .heart-animation,
+#heart-menu-1:checked ~ .heart-animation,
+#heart-menu-2:checked ~ .heart-animation,
+#heart-menu-3:checked ~ .heart-animation,
+#heart-menu-4:checked ~ .heart-animation
 {
     animation: like .4s;
     animation-timing-function: linear;
@@ -26,7 +29,7 @@ label{
     color: transparent;
   }
   
-label{
+.heart-animation{
     position: relative;
     &:after{
     content: '\f004';
@@ -141,6 +144,18 @@ input{
 
 /*SLIDE-UP FOR STARTERS, DISHES AND DESSERTS SECTIONS*/
 
+.starters{
+  animation: slide-up 2s;
+}
+
+.dishes{
+  animation: slide-up 4s;
+}
+
+.desserts{
+  animation: slide-up 6s;
+}
+
 @keyframes slide-up{
   from{
     transform: translateY(200px);
@@ -149,5 +164,57 @@ input{
   to{
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+/*DISH SELECTION*/
+
+.dish-select__animation{
+  cursor: pointer;
+  position: relative;
+  &:before{
+    content: '25€';
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    }
+  &:after{
+    content: '\f058';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+#price1:checked ~ .dish-select__animation:before{
+  animation: price-translation .3s;
+  animation-fill-mode: forwards;
+}
+
+#price1:checked ~ .dish-select__animation:after{
+  animation: dish-check .3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dish-check{
+  from{
+    left:0;
+    opacity: 0;
+  }
+  to{
+    left: -2rem;
+    opacity: 1;
+    background-color: $tertiary;
+  }
+}
+
+@keyframes price-translation{
+  from{
+    left: -2rem;
+  }
+  to{
+    left: -5rem;
   }
 }

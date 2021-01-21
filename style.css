@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap");
 /*FONT WEIGHTS*/
@@ -91,7 +92,7 @@ footer ul li .icon {
 }
 
 /*HEART ANIMATION*/
-label {
+.heart-animation {
   cursor: pointer;
   background: white;
   -webkit-background-clip: text;
@@ -100,11 +101,14 @@ label {
   font-size: 1.5rem;
 }
 
-#heart1:checked ~ label,
-#heart2:checked ~ label,
-#heart3:checked ~ label,
-#heart4:checked ~ label,
-#heart-menu-3:checked ~ label {
+#heart1:checked ~ .heart-animation,
+#heart2:checked ~ .heart-animation,
+#heart3:checked ~ .heart-animation,
+#heart4:checked ~ .heart-animation,
+#heart-menu-1:checked ~ .heart-animation,
+#heart-menu-2:checked ~ .heart-animation,
+#heart-menu-3:checked ~ .heart-animation,
+#heart-menu-4:checked ~ .heart-animation {
   -webkit-animation: like .4s;
           animation: like .4s;
   -webkit-animation-timing-function: linear;
@@ -117,11 +121,11 @@ label {
   color: transparent;
 }
 
-label {
+.heart-animation {
   position: relative;
 }
 
-label:after {
+.heart-animation:after {
   content: '\f004';
   font-family: "Font Awesome 5 Free";
   font-size: 1.6rem;
@@ -355,6 +359,21 @@ input {
 }
 
 /*SLIDE-UP FOR STARTERS, DISHES AND DESSERTS SECTIONS*/
+.starters {
+  -webkit-animation: slide-up 2s;
+          animation: slide-up 2s;
+}
+
+.dishes {
+  -webkit-animation: slide-up 4s;
+          animation: slide-up 4s;
+}
+
+.desserts {
+  -webkit-animation: slide-up 6s;
+          animation: slide-up 6s;
+}
+
 @-webkit-keyframes slide-up {
   from {
     -webkit-transform: translateY(200px);
@@ -367,6 +386,7 @@ input {
     opacity: 1;
   }
 }
+
 @keyframes slide-up {
   from {
     -webkit-transform: translateY(200px);
@@ -377,6 +397,84 @@ input {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+}
+
+/*DISH SELECTION*/
+.dish-select__animation {
+  cursor: pointer;
+  position: relative;
+}
+
+.dish-select__animation:before {
+  content: '25€';
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.dish-select__animation:after {
+  content: '\f058';
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+#price1:checked ~ .dish-select__animation:before {
+  -webkit-animation: price-translation .3s;
+          animation: price-translation .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#price1:checked ~ .dish-select__animation:after {
+  -webkit-animation: dish-check .3s;
+          animation: dish-check .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes dish-check {
+  from {
+    left: 0;
+    opacity: 0;
+  }
+  to {
+    left: -2rem;
+    opacity: 1;
+    background-color: #99E2D0;
+  }
+}
+
+@keyframes dish-check {
+  from {
+    left: 0;
+    opacity: 0;
+  }
+  to {
+    left: -2rem;
+    opacity: 1;
+    background-color: #99E2D0;
+  }
+}
+
+@-webkit-keyframes price-translation {
+  from {
+    left: -2rem;
+  }
+  to {
+    left: -5rem;
+  }
+}
+
+@keyframes price-translation {
+  from {
+    left: -2rem;
+  }
+  to {
+    left: -5rem;
   }
 }
 
@@ -438,7 +536,7 @@ header .place, header .about, .container {
 }
 
 /*HEART ANIMATION*/
-label {
+.heart-animation {
   cursor: pointer;
   background: white;
   -webkit-background-clip: text;
@@ -447,11 +545,14 @@ label {
   font-size: 1.5rem;
 }
 
-#heart1:checked ~ label,
-#heart2:checked ~ label,
-#heart3:checked ~ label,
-#heart4:checked ~ label,
-#heart-menu-3:checked ~ label {
+#heart1:checked ~ .heart-animation,
+#heart2:checked ~ .heart-animation,
+#heart3:checked ~ .heart-animation,
+#heart4:checked ~ .heart-animation,
+#heart-menu-1:checked ~ .heart-animation,
+#heart-menu-2:checked ~ .heart-animation,
+#heart-menu-3:checked ~ .heart-animation,
+#heart-menu-4:checked ~ .heart-animation {
   -webkit-animation: like .4s;
           animation: like .4s;
   -webkit-animation-timing-function: linear;
@@ -464,11 +565,11 @@ label {
   color: transparent;
 }
 
-label {
+.heart-animation {
   position: relative;
 }
 
-label:after {
+.heart-animation:after {
   content: '\f004';
   font-family: "Font Awesome 5 Free";
   font-size: 1.6rem;
@@ -612,6 +713,21 @@ input {
 }
 
 /*SLIDE-UP FOR STARTERS, DISHES AND DESSERTS SECTIONS*/
+.starters {
+  -webkit-animation: slide-up 2s;
+          animation: slide-up 2s;
+}
+
+.dishes {
+  -webkit-animation: slide-up 4s;
+          animation: slide-up 4s;
+}
+
+.desserts {
+  -webkit-animation: slide-up 6s;
+          animation: slide-up 6s;
+}
+
 @keyframes slide-up {
   from {
     -webkit-transform: translateY(200px);
@@ -622,6 +738,63 @@ input {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+}
+
+/*DISH SELECTION*/
+.dish-select__animation {
+  cursor: pointer;
+  position: relative;
+}
+
+.dish-select__animation:before {
+  content: '25€';
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.dish-select__animation:after {
+  content: '\f058';
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+#price1:checked ~ .dish-select__animation:before {
+  -webkit-animation: price-translation .3s;
+          animation: price-translation .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#price1:checked ~ .dish-select__animation:after {
+  -webkit-animation: dish-check .3s;
+          animation: dish-check .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@keyframes dish-check {
+  from {
+    left: 0;
+    opacity: 0;
+  }
+  to {
+    left: -2rem;
+    opacity: 1;
+    background-color: #99E2D0;
+  }
+}
+
+@keyframes price-translation {
+  from {
+    left: -2rem;
+  }
+  to {
+    left: -5rem;
   }
 }
 
@@ -737,21 +910,6 @@ input {
       align-self: center;
   width: 12rem;
   margin-top: 2rem;
-}
-
-.starters {
-  -webkit-animation: slide-up 2s;
-          animation: slide-up 2s;
-}
-
-.dishes {
-  -webkit-animation: slide-up 4s;
-          animation: slide-up 4s;
-}
-
-.desserts {
-  -webkit-animation: slide-up 6s;
-          animation: slide-up 6s;
 }
 
 /*FLEX BEHAVIORS*/
