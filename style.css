@@ -241,8 +241,8 @@ input {
   width: 100%;
   -webkit-animation: loading_background 2.8s;
           animation: loading_background 2.8s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
   position: absolute;
   z-index: 2;
   -webkit-animation-fill-mode: forwards;
@@ -354,6 +354,32 @@ input {
   }
 }
 
+/*SLIDE-UP FOR STARTERS, DISHES AND DESSERTS SECTIONS*/
+@-webkit-keyframes slide-up {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-up {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /*FLEX BEHAVIORS*/
 .card, body, header, header .about, main, main .howto, main .restaurants, .container {
   display: -webkit-box;
@@ -411,6 +437,194 @@ header .place, header .about, .container {
           box-shadow: 5px 5px 10px #A0A0A0;
 }
 
+/*HEART ANIMATION*/
+label {
+  cursor: pointer;
+  background: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+}
+
+#heart1:checked ~ label,
+#heart2:checked ~ label,
+#heart3:checked ~ label,
+#heart4:checked ~ label,
+#heart-menu-3:checked ~ label {
+  -webkit-animation: like .4s;
+          animation: like .4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(96%, #FF79DA), color-stop(96%, #fff));
+  background: linear-gradient(to top, #FF79DA 96%, #fff 96%);
+  background-size: auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+label {
+  position: relative;
+}
+
+label:after {
+  content: '\f004';
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.6rem;
+  color: white;
+  background: #393939;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: -1px;
+  top: -2px;
+}
+
+input {
+  display: none;
+}
+
+@keyframes like {
+  0% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(0%, #fff));
+    background: linear-gradient(to top, #FF79DA 0%, #fff 0%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  25% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #FF79DA), color-stop(25%, #fff));
+    background: linear-gradient(to top, #FF79DA 25%, #fff 25%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  50% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #FF79DA), color-stop(50%, #fff));
+    background: linear-gradient(to top, #FF79DA 50%, #fff 50%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  75% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #FF79DA), color-stop(75%, #fff));
+    background: linear-gradient(to top, #FF79DA 75%, #fff 75%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  100% {
+    background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(100%, #FF79DA), to(#fff));
+    background: linear-gradient(to top, #FF79DA 100%, #fff 100%);
+    background-size: auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+/*LOADING SPINNER*/
+.loading {
+  height: 200vh;
+  width: 100%;
+  -webkit-animation: loading_background 2.8s;
+          animation: loading_background 2.8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  position: absolute;
+  z-index: 2;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loading__spinner {
+  -webkit-animation: loading_spinner 1s;
+          animation: loading_spinner 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  z-index: 3;
+  top: 21vh;
+  left: 48%;
+  will-change: transform;
+}
+
+/*I'll have to be more specific for left-position of the spinner, it has to be perfectly centered.*/
+@keyframes loading_background {
+  0% {
+    background: black;
+    opacity: 0.8;
+  }
+  25% {
+    background: black;
+    opacity: 0.8;
+  }
+  50% {
+    background: black;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  75% {
+    background: black;
+    opacity: 0.4;
+    z-index: 0;
+  }
+  100% {
+    background: black;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes loading_spinner {
+  0% {
+    border: 8px solid #99E2D0;
+    border-bottom-color: #9356DC;
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    border: 8px solid #99E2D0;
+    border-bottom-color: #9356DC;
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+            transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+/*SLIDE-UP FOR STARTERS, DISHES AND DESSERTS SECTIONS*/
+@keyframes slide-up {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /*MENUS*/
 .main-menu {
   border-top-left-radius: 20px;
@@ -438,6 +652,16 @@ header .place, header .about, .container {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
+}
+
+.cover {
+  max-height: 300px;
+  width: 100%;
+}
+
+.cover img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .starters__title,
@@ -504,6 +728,21 @@ header .place, header .about, .container {
       align-self: center;
   width: 12rem;
   margin-top: 2rem;
+}
+
+.starters {
+  -webkit-animation: slide-up 2s;
+          animation: slide-up 2s;
+}
+
+.dishes {
+  -webkit-animation: slide-up 4s;
+          animation: slide-up 4s;
+}
+
+.desserts {
+  -webkit-animation: slide-up 6s;
+          animation: slide-up 6s;
 }
 
 /*FLEX BEHAVIORS*/

@@ -75,7 +75,7 @@ input{
   height: 200vh;
   width: 100%;
   animation: loading_background 2.8s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-out;
   position: absolute;
   z-index: 2;
   animation-fill-mode: forwards;
@@ -136,5 +136,18 @@ input{
     border-bottom-color: $primary;
     opacity: 1;
     transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+/*SLIDE-UP FOR STARTERS, DISHES AND DESSERTS SECTIONS*/
+
+@keyframes slide-up{
+  from{
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -1,4 +1,4 @@
-@import 'extensions', 'mixins';
+@import 'extensions', 'mixins', 'animations';
 
 /*MENUS*/
 
@@ -24,6 +24,14 @@
     }
 }
 
+.cover{
+    max-height: 300px;
+    width: 100%;
+    img{
+        object-fit: cover;
+    }
+}
+
 .starters,
 .dishes,
 .desserts{
@@ -41,7 +49,7 @@
         position: absolute;
         left: 0;
         bottom: -7px;
-    }
+        }
     }
 }
 
@@ -70,4 +78,16 @@
     align-self: center;
     width: 12rem;
     margin-top: 2rem;
+}
+
+.starters{
+    animation: slide-up 2s;
+}
+
+.dishes{
+    animation: slide-up 4s;
+}
+
+.desserts{
+    animation: slide-up 6s;
 }
