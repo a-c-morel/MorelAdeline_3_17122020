@@ -91,6 +91,63 @@ footer ul li .icon {
   margin-left: 2rem;
 }
 
+/*FLEX BEHAVIORS*/
+.card, body, header, header .about, main, main .howto, main .restaurants, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .howto, main .restaurants {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .place, header .about, .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*FONTS*/
+.starters__title,
+.dishes__title,
+.desserts__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+/*BUTTONS*/
+.submit__order, .about .explore {
+  border-radius: 30px;
+  padding: 1.2rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-shadow: 5px 5px 10px #888888;
+          box-shadow: 5px 5px 10px #888888;
+  margin-bottom: 3rem;
+}
+
+.submit__order:hover, .about .explore:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
+  background: linear-gradient(to bottom right, #ff8ade, #a06be1);
+  -webkit-box-shadow: 5px 5px 10px #A0A0A0;
+          box-shadow: 5px 5px 10px #A0A0A0;
+}
+
 /*HEART ANIMATION*/
 .heart-animation {
   cursor: pointer;
@@ -243,6 +300,19 @@ input {
 .loading {
   height: 200vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-animation: loading_background 2.8s;
           animation: loading_background 2.8s;
   -webkit-animation-timing-function: ease-out;
@@ -267,8 +337,9 @@ input {
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   z-index: 3;
-  top: 21vh;
+  top: 270px;
   left: 48%;
+  /*I'll change this percentage with media queries for desktop*/
   will-change: transform;
 }
 
@@ -406,43 +477,155 @@ input {
   position: relative;
 }
 
-.dish-select__animation:before {
+.dish-select__animation--25:before {
   content: '25€';
   position: absolute;
-  top: 0;
-  left: -2rem;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--35:before {
+  content: '35€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--20:before {
+  content: '20€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--40:before {
+  content: '40€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--44:before {
+  content: '44€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--18:before {
+  content: '18€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--22:before {
+  content: '22€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--23:before {
+  content: '23€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
 }
 
 .dish-select__animation:after {
   content: '\f058';
   font-family: "Font Awesome 5 Free";
+  color: white;
+  font-size: 1.5rem;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+  padding: 1.5rem .9rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   opacity: 0;
 }
 
-#price1:checked ~ .dish-select__animation:before {
-  -webkit-animation: price-translation .3s;
-          animation: price-translation .3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-#price1:checked ~ .dish-select__animation:after {
+#price1:checked ~ .dish-select__animation:after,
+#price2:checked ~ .dish-select__animation:after,
+#price3:checked ~ .dish-select__animation:after,
+#price4:checked ~ .dish-select__animation:after,
+#price5:checked ~ .dish-select__animation:after,
+#price6:checked ~ .dish-select__animation:after,
+#price7:checked ~ .dish-select__animation:after,
+#price8:checked ~ .dish-select__animation:after,
+#price9:checked ~ .dish-select__animation:after,
+#price10:checked ~ .dish-select__animation:after,
+#price11:checked ~ .dish-select__animation:after,
+#price12:checked ~ .dish-select__animation:after,
+#price13:checked ~ .dish-select__animation:after,
+#price14:checked ~ .dish-select__animation:after,
+#price15:checked ~ .dish-select__animation:after,
+#price16:checked ~ .dish-select__animation:after,
+#price17:checked ~ .dish-select__animation:after,
+#price18:checked ~ .dish-select__animation:after,
+#price19:checked ~ .dish-select__animation:after {
   -webkit-animation: dish-check .3s;
           animation: dish-check .3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
+#price1:checked ~ .dish-select__animation:before,
+#price2:checked ~ .dish-select__animation:before,
+#price3:checked ~ .dish-select__animation:before,
+#price4:checked ~ .dish-select__animation:before,
+#price5:checked ~ .dish-select__animation:before,
+#price6:checked ~ .dish-select__animation:before,
+#price7:checked ~ .dish-select__animation:before,
+#price8:checked ~ .dish-select__animation:before,
+#price9:checked ~ .dish-select__animation:before,
+#price10:checked ~ .dish-select__animation:before,
+#price11:checked ~ .dish-select__animation:before,
+#price12:checked ~ .dish-select__animation:before,
+#price13:checked ~ .dish-select__animation:before,
+#price14:checked ~ .dish-select__animation:before,
+#price15:checked ~ .dish-select__animation:before,
+#price16:checked ~ .dish-select__animation:before,
+#price17:checked ~ .dish-select__animation:before,
+#price18:checked ~ .dish-select__animation:before,
+#price19:checked ~ .dish-select__animation:before {
+  -webkit-animation: price-translation .3s;
+          animation: price-translation .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @-webkit-keyframes dish-check {
   from {
-    left: 0;
     opacity: 0;
   }
   to {
-    left: -2rem;
     opacity: 1;
     background-color: #99E2D0;
   }
@@ -450,11 +633,9 @@ input {
 
 @keyframes dish-check {
   from {
-    left: 0;
     opacity: 0;
   }
   to {
-    left: -2rem;
     opacity: 1;
     background-color: #99E2D0;
   }
@@ -462,20 +643,77 @@ input {
 
 @-webkit-keyframes price-translation {
   from {
-    left: -2rem;
+    right: 1rem;
   }
   to {
-    left: -5rem;
+    right: 4rem;
   }
 }
 
 @keyframes price-translation {
   from {
-    left: -2rem;
+    right: 1rem;
   }
   to {
-    left: -5rem;
+    right: 4rem;
   }
+}
+
+/*FLEX BEHAVIORS*/
+.card, body, header, header .about, main, main .howto, main .restaurants, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .howto, main .restaurants {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .place, header .about, .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*FONTS*/
+.starters__title,
+.dishes__title,
+.desserts__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+/*BUTTONS*/
+.submit__order, .about .explore {
+  border-radius: 30px;
+  padding: 1.2rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-shadow: 5px 5px 10px #888888;
+          box-shadow: 5px 5px 10px #888888;
+  margin-bottom: 3rem;
+}
+
+.submit__order:hover, .about .explore:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
+  background: linear-gradient(to bottom right, #ff8ade, #a06be1);
+  -webkit-box-shadow: 5px 5px 10px #A0A0A0;
+          box-shadow: 5px 5px 10px #A0A0A0;
 }
 
 /*FLEX BEHAVIORS*/
@@ -639,6 +877,19 @@ input {
 .loading {
   height: 200vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-animation: loading_background 2.8s;
           animation: loading_background 2.8s;
   -webkit-animation-timing-function: ease-out;
@@ -663,8 +914,9 @@ input {
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   z-index: 3;
-  top: 21vh;
+  top: 270px;
   left: 48%;
+  /*I'll change this percentage with media queries for desktop*/
   will-change: transform;
 }
 
@@ -747,43 +999,155 @@ input {
   position: relative;
 }
 
-.dish-select__animation:before {
+.dish-select__animation--25:before {
   content: '25€';
   position: absolute;
-  top: 0;
-  left: -2rem;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--35:before {
+  content: '35€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--20:before {
+  content: '20€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--40:before {
+  content: '40€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--44:before {
+  content: '44€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--18:before {
+  content: '18€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--22:before {
+  content: '22€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dish-select__animation--23:before {
+  content: '23€';
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
 }
 
 .dish-select__animation:after {
   content: '\f058';
   font-family: "Font Awesome 5 Free";
+  color: white;
+  font-size: 1.5rem;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+  padding: 1.5rem .9rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   opacity: 0;
 }
 
-#price1:checked ~ .dish-select__animation:before {
-  -webkit-animation: price-translation .3s;
-          animation: price-translation .3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-#price1:checked ~ .dish-select__animation:after {
+#price1:checked ~ .dish-select__animation:after,
+#price2:checked ~ .dish-select__animation:after,
+#price3:checked ~ .dish-select__animation:after,
+#price4:checked ~ .dish-select__animation:after,
+#price5:checked ~ .dish-select__animation:after,
+#price6:checked ~ .dish-select__animation:after,
+#price7:checked ~ .dish-select__animation:after,
+#price8:checked ~ .dish-select__animation:after,
+#price9:checked ~ .dish-select__animation:after,
+#price10:checked ~ .dish-select__animation:after,
+#price11:checked ~ .dish-select__animation:after,
+#price12:checked ~ .dish-select__animation:after,
+#price13:checked ~ .dish-select__animation:after,
+#price14:checked ~ .dish-select__animation:after,
+#price15:checked ~ .dish-select__animation:after,
+#price16:checked ~ .dish-select__animation:after,
+#price17:checked ~ .dish-select__animation:after,
+#price18:checked ~ .dish-select__animation:after,
+#price19:checked ~ .dish-select__animation:after {
   -webkit-animation: dish-check .3s;
           animation: dish-check .3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
+#price1:checked ~ .dish-select__animation:before,
+#price2:checked ~ .dish-select__animation:before,
+#price3:checked ~ .dish-select__animation:before,
+#price4:checked ~ .dish-select__animation:before,
+#price5:checked ~ .dish-select__animation:before,
+#price6:checked ~ .dish-select__animation:before,
+#price7:checked ~ .dish-select__animation:before,
+#price8:checked ~ .dish-select__animation:before,
+#price9:checked ~ .dish-select__animation:before,
+#price10:checked ~ .dish-select__animation:before,
+#price11:checked ~ .dish-select__animation:before,
+#price12:checked ~ .dish-select__animation:before,
+#price13:checked ~ .dish-select__animation:before,
+#price14:checked ~ .dish-select__animation:before,
+#price15:checked ~ .dish-select__animation:before,
+#price16:checked ~ .dish-select__animation:before,
+#price17:checked ~ .dish-select__animation:before,
+#price18:checked ~ .dish-select__animation:before,
+#price19:checked ~ .dish-select__animation:before {
+  -webkit-animation: price-translation .3s;
+          animation: price-translation .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @keyframes dish-check {
   from {
-    left: 0;
     opacity: 0;
   }
   to {
-    left: -2rem;
     opacity: 1;
     background-color: #99E2D0;
   }
@@ -791,10 +1155,10 @@ input {
 
 @keyframes price-translation {
   from {
-    left: -2rem;
+    right: 1rem;
   }
   to {
-    left: -5rem;
+    right: 4rem;
   }
 }
 
@@ -1065,6 +1429,8 @@ header .place, header .about, .container {
 }
 
 .banner--menu {
+  width: 70%;
+  /*réduire le pourcentage en version desktop pour recentrer*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1072,12 +1438,19 @@ header .place, header .about, .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-left: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  padding-left: 1rem;
   padding-right: 0;
 }
 
 .banner__back-button {
-  width: 3rem;
+  font-size: 1.4rem;
 }
 
 ::-moz-selection {

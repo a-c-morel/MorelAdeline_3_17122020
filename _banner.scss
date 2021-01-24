@@ -9,14 +9,18 @@
     }
 
     &--menu{
+        width: 70%; /*réduire le pourcentage en version desktop pour recentrer*/
         display: flex;
         flex-direction: row;
-        padding-left: 0;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        padding-left: 1rem;
         padding-right: 0;
     }
 
     &__back-button{
-        width: 3rem;
+        font-size: 1.4rem;
     }
 
 }

@@ -1,4 +1,4 @@
-@import 'mixins';
+@import 'mixins', 'extensions';
 
 /*HEART ANIMATION*/
 
@@ -77,6 +77,10 @@ input{
 .loading{
   height: 200vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   animation: loading_background 2.8s;
   animation-timing-function: ease-out;
   position: absolute;
@@ -93,8 +97,8 @@ input{
     position: absolute;
     transform: translate3d(-50%, -50%, 0);
     z-index: 3;
-    top: 21vh;
-    left: 48%;
+    top: 270px;
+    left: 48%; /*I'll change this percentage with media queries for desktop*/
     will-change: transform;
   }
 }
@@ -172,39 +176,144 @@ input{
 .dish-select__animation{
   cursor: pointer;
   position: relative;
-  &:before{
-    content: '25€';
-    position: absolute;
-    top: 0;
-    left: -2rem;
+  &--25{
+    &:before{
+      content: '25€';
+      position: absolute;
+      top: 2.3rem;
+      right: 1rem;
+      @include font(1rem, $bold);
     }
+  }
+  &--35{
+    &:before{
+      content: '35€';
+      position: absolute;
+      top: 2.3rem;
+      right: 1rem;
+      @include font(1rem, $bold);
+    }
+  }
+  &--20{
+    &:before{
+      content: '20€';
+      position: absolute;
+      top: 2.3rem;
+      right: 1rem;
+      @include font(1rem, $bold);
+    }
+  }
+  &--40{
+    &:before{
+      content: '40€';
+      position: absolute;
+      top: 2.3rem;
+      right: 1rem;
+      @include font(1rem, $bold);
+    }
+  }
+  &--44{
+    &:before{
+      content: '44€';
+      position: absolute;
+      top: 2.3rem;
+      right: 1rem;
+      @include font(1rem, $bold);
+    }
+  }
+  &--18{
+    &:before{
+      content: '18€';
+      position: absolute;
+      top: 2.3rem;
+      right: 1rem;
+      @include font(1rem, $bold);
+    }
+  }
+  &--22{
+    &:before{
+      content: '22€';
+      position: absolute;
+      top: 2.3rem;
+      right: 1rem;
+      @include font(1rem, $bold);
+    }
+  }
+  &--23{
+    &:before{
+      content: '23€';
+      position: absolute;
+      top: 2.3rem;
+      right: 1rem;
+      @include font(1rem, $bold);
+    }
+  }
   &:after{
     content: '\f058';
     font-family: "Font Awesome 5 Free";
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
+    padding: 1.5rem .9rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     opacity: 0;
   }
 }
 
-#price1:checked ~ .dish-select__animation:before{
-  animation: price-translation .3s;
+#price1:checked ~ .dish-select__animation:after,
+#price2:checked ~ .dish-select__animation:after,
+#price3:checked ~ .dish-select__animation:after,
+#price4:checked ~ .dish-select__animation:after,
+#price5:checked ~ .dish-select__animation:after,
+#price6:checked ~ .dish-select__animation:after,
+#price7:checked ~ .dish-select__animation:after,
+#price8:checked ~ .dish-select__animation:after,
+#price9:checked ~ .dish-select__animation:after,
+#price10:checked ~ .dish-select__animation:after,
+#price11:checked ~ .dish-select__animation:after,
+#price12:checked ~ .dish-select__animation:after,
+#price13:checked ~ .dish-select__animation:after,
+#price14:checked ~ .dish-select__animation:after,
+#price15:checked ~ .dish-select__animation:after,
+#price16:checked ~ .dish-select__animation:after,
+#price17:checked ~ .dish-select__animation:after,
+#price18:checked ~ .dish-select__animation:after,
+#price19:checked ~ .dish-select__animation:after{
+  animation: dish-check .3s;
   animation-fill-mode: forwards;
 }
 
-#price1:checked ~ .dish-select__animation:after{
-  animation: dish-check .3s;
+#price1:checked ~ .dish-select__animation:before,
+#price2:checked ~ .dish-select__animation:before,
+#price3:checked ~ .dish-select__animation:before,
+#price4:checked ~ .dish-select__animation:before,
+#price5:checked ~ .dish-select__animation:before,
+#price6:checked ~ .dish-select__animation:before,
+#price7:checked ~ .dish-select__animation:before,
+#price8:checked ~ .dish-select__animation:before,
+#price9:checked ~ .dish-select__animation:before,
+#price10:checked ~ .dish-select__animation:before,
+#price11:checked ~ .dish-select__animation:before,
+#price12:checked ~ .dish-select__animation:before,
+#price13:checked ~ .dish-select__animation:before,
+#price14:checked ~ .dish-select__animation:before,
+#price15:checked ~ .dish-select__animation:before,
+#price16:checked ~ .dish-select__animation:before,
+#price17:checked ~ .dish-select__animation:before,
+#price18:checked ~ .dish-select__animation:before,
+#price19:checked ~ .dish-select__animation:before{
+  animation: price-translation .3s;
   animation-fill-mode: forwards;
 }
 
 @keyframes dish-check{
   from{
-    left:0;
     opacity: 0;
   }
   to{
-    left: -2rem;
     opacity: 1;
     background-color: $tertiary;
   }
@@ -212,9 +321,9 @@ input{
 
 @keyframes price-translation{
   from{
-    left: -2rem;
+    right: 1rem;
   }
   to{
-    left: -5rem;
+    right: 4rem;
   }
 }
