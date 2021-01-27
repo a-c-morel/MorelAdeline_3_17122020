@@ -281,7 +281,25 @@ input{
 #price16:checked ~ .dish-select__animation:after,
 #price17:checked ~ .dish-select__animation:after,
 #price18:checked ~ .dish-select__animation:after,
-#price19:checked ~ .dish-select__animation:after{
+#price19:checked ~ .dish-select__animation:after,
+#price20:checked ~ .dish-select__animation:after,
+#price21:checked ~ .dish-select__animation:after,
+#price22:checked ~ .dish-select__animation:after,
+#price23:checked ~ .dish-select__animation:after,
+#price24:checked ~ .dish-select__animation:after,
+#price25:checked ~ .dish-select__animation:after,
+#price26:checked ~ .dish-select__animation:after,
+#price27:checked ~ .dish-select__animation:after,
+#price28:checked ~ .dish-select__animation:after,
+#price29:checked ~ .dish-select__animation:after,
+#price30:checked ~ .dish-select__animation:after,
+#price31:checked ~ .dish-select__animation:after,
+#price32:checked ~ .dish-select__animation:after,
+#price33:checked ~ .dish-select__animation:after,
+#price34:checked ~ .dish-select__animation:after,
+#price35:checked ~ .dish-select__animation:after,
+#price36:checked ~ .dish-select__animation:after,
+#price37:checked ~ .dish-select__animation:after{
   animation: dish-check .3s;
   animation-fill-mode: forwards;
 }
@@ -304,7 +322,25 @@ input{
 #price16:checked ~ .dish-select__animation:before,
 #price17:checked ~ .dish-select__animation:before,
 #price18:checked ~ .dish-select__animation:before,
-#price19:checked ~ .dish-select__animation:before{
+#price19:checked ~ .dish-select__animation:before,
+#price20:checked ~ .dish-select__animation:before,
+#price21:checked ~ .dish-select__animation:before,
+#price22:checked ~ .dish-select__animation:before,
+#price23:checked ~ .dish-select__animation:before,
+#price24:checked ~ .dish-select__animation:before,
+#price25:checked ~ .dish-select__animation:before,
+#price26:checked ~ .dish-select__animation:before,
+#price27:checked ~ .dish-select__animation:before,
+#price28:checked ~ .dish-select__animation:before,
+#price29:checked ~ .dish-select__animation:before,
+#price30:checked ~ .dish-select__animation:before,
+#price31:checked ~ .dish-select__animation:before,
+#price32:checked ~ .dish-select__animation:before,
+#price33:checked ~ .dish-select__animation:before,
+#price34:checked ~ .dish-select__animation:before,
+#price35:checked ~ .dish-select__animation:before,
+#price36:checked ~ .dish-select__animation:before,
+#price37:checked ~ .dish-select__animation:before{
   animation: price-translation .3s;
   animation-fill-mode: forwards;
 }
