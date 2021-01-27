@@ -39,7 +39,6 @@
     border:none; cursor:pointer;
     @include font(1rem, $bold);
     @include shadow;
-    margin-bottom: 3rem;
 
     &:hover{
         background:linear-gradient(to bottom right, hsl(317, 100%, 77%),hsl(267, 66%, 65%));
