@@ -3,6 +3,7 @@
         flex-direction: row;
         height: 5rem;
         box-shadow: 0 0 6px #888888;
+        z-index: 1;
 
         .place{
             background-color: $lightbackground;
@@ -32,5 +33,61 @@
 
     .banner{
         box-shadow: none;
+
+        &--menu{
+            justify-content: flex-start;
+        }
+    }
+
+    .main-menu{
+        margin: 3rem;
+        background:#f8f6f6c5;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .banner__logo--menu{
+        margin-left: 2rem;
+    }
+
+    .cover{
+        display: none;
+    }
+
+    .background{
+        height: 260vh;
+        width: 100%;
+        position: absolute;
+        top: 5rem;        
+        background-attachment: fixed;
+        background-size: cover;
+
+        &--menu1{
+            background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+        }
+
+        &--menu2{
+            background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+        }
+
+        &--menu3{
+            background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+        }
+
+        &--menu4{
+            background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+        } 
+    }
+
+    footer{
+        z-index: 1;
+    }
+
+    .desktop-size{
+        width: 60%;
+    }
+
+    .submit__order{
+        align-self: flex-start;
     }
 }
