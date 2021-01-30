@@ -3,8 +3,8 @@
 /*MENUS*/
 
 .main-menu{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
     margin-top: -45px;
     z-index: 2;
     background: #f6f6f6;
@@ -61,7 +61,7 @@
     padding: 1rem;
     max-height: 4rem;
     margin-bottom: 1.4rem;
-    border-radius: 20px;
+    border-radius: $border-radius;
 
     &__info{
         h3{

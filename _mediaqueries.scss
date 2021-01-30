@@ -44,8 +44,16 @@
         padding-left: 3rem;
         padding-right: 3rem;
         background:#f8f6f6c5;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+
+        &__title{
+            justify-content: flex-start;
+        }
+
+        h1{
+            margin-right: 2rem;
+        }
     }
 
     .banner__logo--menu{
@@ -104,4 +112,9 @@
     .restaurants{
         width: 60%;
     }
+
+    .card{
+        max-width: 250px;
+    }
+
 }

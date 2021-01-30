@@ -298,8 +298,8 @@ input {
 .loading {
   height: 200vh;
   width: 100%;
-  -webkit-animation: loading_background 2.8s;
-          animation: loading_background 2.8s;
+  -webkit-animation: loading_background 3.8s;
+          animation: loading_background 3.8s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   position: absolute;
@@ -313,8 +313,8 @@ input {
           animation: loading_spinner 1s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -330,7 +330,6 @@ input {
   will-change: transform;
 }
 
-/*I'll have to be more specific for left-position of the spinner, it has to be perfectly centered.*/
 @-webkit-keyframes loading_background {
   0% {
     background: black;
@@ -342,20 +341,21 @@ input {
   }
   50% {
     background: black;
-    opacity: 0.7;
-    z-index: 1;
+    opacity: 0.2;
+    /*z-index: 1;*/
   }
   75% {
     background: black;
-    opacity: 0.4;
-    z-index: 0;
+    opacity: 0.1;
+    /*z-index: 0;*/
   }
   100% {
     background: black;
     opacity: 0;
-    z-index: -1;
+    height: 0;
   }
 }
+
 @keyframes loading_background {
   0% {
     background: black;
@@ -367,18 +367,18 @@ input {
   }
   50% {
     background: black;
-    opacity: 0.7;
-    z-index: 1;
+    opacity: 0.2;
+    /*z-index: 1;*/
   }
   75% {
     background: black;
-    opacity: 0.4;
-    z-index: 0;
+    opacity: 0.1;
+    /*z-index: 0;*/
   }
   100% {
     background: black;
     opacity: 0;
-    z-index: -1;
+    height: 0;
   }
 }
 
@@ -465,7 +465,7 @@ input {
 }
 
 .dish-select__animation--25:before {
-  content: '25€';
+  content: "25€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -475,7 +475,7 @@ input {
 }
 
 .dish-select__animation--35:before {
-  content: '35€';
+  content: "35€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -485,7 +485,7 @@ input {
 }
 
 .dish-select__animation--20:before {
-  content: '20€';
+  content: "20€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -495,7 +495,7 @@ input {
 }
 
 .dish-select__animation--40:before {
-  content: '40€';
+  content: "40€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -505,7 +505,7 @@ input {
 }
 
 .dish-select__animation--44:before {
-  content: '44€';
+  content: "44€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -515,7 +515,7 @@ input {
 }
 
 .dish-select__animation--18:before {
-  content: '18€';
+  content: "18€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -525,7 +525,7 @@ input {
 }
 
 .dish-select__animation--22:before {
-  content: '22€';
+  content: "22€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -535,7 +535,7 @@ input {
 }
 
 .dish-select__animation--23:before {
-  content: '23€';
+  content: "23€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -898,8 +898,8 @@ input {
 .loading {
   height: 200vh;
   width: 100%;
-  -webkit-animation: loading_background 2.8s;
-          animation: loading_background 2.8s;
+  -webkit-animation: loading_background 3.8s;
+          animation: loading_background 3.8s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   position: absolute;
@@ -913,8 +913,8 @@ input {
           animation: loading_spinner 1s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -930,7 +930,6 @@ input {
   will-change: transform;
 }
 
-/*I'll have to be more specific for left-position of the spinner, it has to be perfectly centered.*/
 @keyframes loading_background {
   0% {
     background: black;
@@ -942,18 +941,18 @@ input {
   }
   50% {
     background: black;
-    opacity: 0.7;
-    z-index: 1;
+    opacity: 0.2;
+    /*z-index: 1;*/
   }
   75% {
     background: black;
-    opacity: 0.4;
-    z-index: 0;
+    opacity: 0.1;
+    /*z-index: 0;*/
   }
   100% {
     background: black;
     opacity: 0;
-    z-index: -1;
+    height: 0;
   }
 }
 
@@ -1010,7 +1009,7 @@ input {
 }
 
 .dish-select__animation--25:before {
-  content: '25€';
+  content: "25€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -1020,7 +1019,7 @@ input {
 }
 
 .dish-select__animation--35:before {
-  content: '35€';
+  content: "35€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -1030,7 +1029,7 @@ input {
 }
 
 .dish-select__animation--20:before {
-  content: '20€';
+  content: "20€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -1040,7 +1039,7 @@ input {
 }
 
 .dish-select__animation--40:before {
-  content: '40€';
+  content: "40€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -1050,7 +1049,7 @@ input {
 }
 
 .dish-select__animation--44:before {
-  content: '44€';
+  content: "44€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -1060,7 +1059,7 @@ input {
 }
 
 .dish-select__animation--18:before {
-  content: '18€';
+  content: "18€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -1070,7 +1069,7 @@ input {
 }
 
 .dish-select__animation--22:before {
-  content: '22€';
+  content: "22€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -1080,7 +1079,7 @@ input {
 }
 
 .dish-select__animation--23:before {
-  content: '23€';
+  content: "23€";
   position: absolute;
   top: 2.3rem;
   right: 1rem;
@@ -1476,7 +1475,6 @@ header .place, header .about, .container {
 
 .banner--menu {
   width: 70%;
-  /*réduire le pourcentage en version desktop pour recentrer*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1551,6 +1549,14 @@ header .place, header .about, .container {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+  .main-menu__title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .main-menu h1 {
+    margin-right: 2rem;
+  }
   .banner__logo--menu {
     margin-left: 2rem;
   }
@@ -1599,6 +1605,9 @@ header .place, header .about, .container {
   .restaurants {
     width: 60%;
   }
+  .card {
+    max-width: 250px;
+  }
 }
 
 ::-moz-selection {
@@ -1625,6 +1634,10 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+a:active {
+  background: transparent;
 }
 
 ul {
