@@ -10,9 +10,8 @@
 
     &--menu{
         width: 70%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @extend %row;
+        @extend %center;
         justify-content: space-between;
         padding: 1rem;
         padding-left: 1rem;

@@ -7,6 +7,11 @@
 	flex-direction: column;
 }
 
+%row{
+    display: flex;
+    flex-direction: row;
+}
+
 %flexstart {
 	align-items: flex-start;
 }
@@ -44,4 +49,10 @@
         background:linear-gradient(to bottom right, hsl(317, 100%, 77%),hsl(267, 66%, 65%));
         @include shadow(5px 5px 10px $shadowhover);
     }
+}
+
+/*BACKGROUNDS*/
+
+%background-size{
+    background-size: cover;
 }

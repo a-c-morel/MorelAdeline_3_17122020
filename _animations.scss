@@ -7,6 +7,7 @@
     background: white;
     -webkit-background-clip : text;
     background-clip: text;
+    /*I don't know if I can use it, because it is not standard but I checked on caniuse and it seems ok...*/
     -webkit-text-fill-color : transparent;
     font-size: 1.5rem;
 }
@@ -115,7 +116,9 @@ input{
   50%{
     background: rgb(0, 0, 0);
     opacity: 0.2;
-    /*z-index: 1;*/
+    /*z-index: 1;
+    -> my first idea was to use z-index and decrease it to make it disapear,
+    but it was jerky and some elements seemed to pop up because of their z-index which were higher*/
   }
   75%{
     background: rgb(0, 0, 0);
