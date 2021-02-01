@@ -40,40 +40,15 @@
     }
 
     .main-menu{
-        margin: 3rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        background:#f8f6f6c5;
-        border-bottom-left-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
-
-        &__title{
-            justify-content: flex-start;
-        }
-
-        h1{
-            margin-right: 2rem;
-        }
-    }
-
-    .banner__logo--menu{
-        margin-left: 2rem;
-    }
-
-    .cover{
-        display: none;
-    }
-
-    .background{
-        height: 260vh;
-        width: 100%;
-        position: absolute;
-        top: 5rem;        
-        background-attachment: fixed;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        border-radius: 0;
+
 
         &--menu1{
-            background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg)
         }
 
         &--menu2{
@@ -87,6 +62,30 @@
         &--menu4{
             background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
         } 
+        
+        &__info{
+            background-color: #f8f6f6c5;
+            background-size: cover;
+            border-radius: $border-radius;
+            margin: 3rem;
+            padding: 1rem;
+
+            &__title{
+                justify-content: flex-start;
+            }
+
+            h1{
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    .banner__logo--menu{
+        margin-left: 2rem;
+    }
+
+    .cover{
+        display: none;
     }
 
     footer{

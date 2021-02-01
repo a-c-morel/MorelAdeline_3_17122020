@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="background background--menu2"></div>
+    <!--<div class="background background--menu2"></div>-->
 
     <header>
         <nav class="banner--menu">
@@ -30,151 +30,154 @@
     </header>
 
 
-    <main class="main-menu">
+    <main class="main-menu main-menu--menu2">
 
-        <div class="main-menu__title">
-            <h1>La note enchantée</h1>
-            <div>
-                <input type="checkbox" id="heart-menu-2">
-                <label class="heart-animation" for="heart-menu-2"><i class="fa fa-heart"></i></label>
+        <div class="main-menu__info">
+            <div class="main-menu__title">
+                <h1>La note enchantée</h1>
+                <div>
+                    <input type="checkbox" id="heart-menu-2">
+                    <label class="heart-animation" for="heart-menu-2"><i class="fa fa-heart"></i></label>
+                </div>
             </div>
-        </div>
+            
+    
+            <!--ENTREES-->
+            <section class="starters">
+    
+                <h2 class="starters__title">Entrées</h2>
+    
+                <!--ENTREE 1-->
+                <article class="desktop-size">
+                    <input type="checkbox" id="price10">
+                    <label class=" dish-select dish-select__animation dish-select__animation--25" for="price10">
+                    <div class="dish-select__info">
+                        <h3>Ravioles de foie gras</h3>
+                        <p>Accompagnés de leur crème à la truffe</p>
+                    </div>
+                    </label>
+                </article>
+    
+                <!--ENTREE 2-->
+                <article class="desktop-size">
+                    <input type="checkbox" id="price11">
+                    <label class=" dish-select dish-select__animation dish-select__animation--35" for="price11">
+                    <div class="dish-select__info">
+                        <h3>Caviar osciètre</h3>
+                        <p>Sur blini à la farine de blé noir</p>
+                    </div>
+                    </label>
+                </article>
+    
+                <!--ENTREE 3-->
+                <article class="desktop-size">
+                    <input type="checkbox" id="price12">
+                    <label class=" dish-select dish-select__animation dish-select__animation--20" for="price12">
+                    <div class="dish-select__info">
+                        <h3>Homard et espuma de...</h3>
+                        <p>Mariné aux zests d'orange</p>
+                    </div>
+                    </label>
+                </article>
+    
+                <!--ENTREE 4-->
+                <article class="desktop-size">
+                    <input type="checkbox" id="price13">
+                    <label class=" dish-select dish-select__animation dish-select__animation--35" for="price13">
+                    <div class="dish-select__info">
+                        <h3>Foie gras de canard cuit entier</h3>
+                        <p>Confiture de figue et pain toasté</p>
+                    </div>
+                    </label>
+                </article>
+    
+            </section>
+    
+            <!--PLATS-->
+            <section class="dishes">
+    
+                <h2 class="dishes__title">Plats</h2>
+    
+                <!--PLAT 1-->
+                <article class="desktop-size">
+                    <input type="checkbox" id="price14">
+                    <label class=" dish-select dish-select__animation dish-select__animation--40" for="price14">
+                    <div class="dish-select__info">
+                        <h3>Noix de coquilles Saint-Jacques</h3>
+                        <p>Sur lit de purée de céleri-rave</p>
+                    </div>
+                    </label>
+                </article>
+    
+                <!--PLAT 2-->
+                <article class="desktop-size">
+                    <input type="checkbox" id="price15">
+                    <label class=" dish-select dish-select__animation dish-select__animation--35" for="price15">
+                    <div class="dish-select__info">
+                        <h3>Langoustine poêlée</h3>
+                        <p>Purée de patate douce</p>
+                    </div>
+                    </label>
+                </article>
+    
+                <!--PLAT 3-->
+                <article class="desktop-size">
+                    <input type="checkbox" id="price16">
+                    <label class=" dish-select dish-select__animation dish-select__animation--44" for="price16">
+                    <div class="dish-select__info">
+                        <h3>Mijoté de queue de boeuf</h3>
+                        <p>Et riz sauvage aux zests de citron</p>
+                    </div>
+                    </label>
+                </article>
+    
+            </section>
+    
+            <!--DESSERTS-->
+            <section class="desserts">
+    
+                <h2 class="desserts__title">Desserts</h2>
+    
+                <!--DESSERT 1-->
+                <article class="desktop-size">
+                    <input type="checkbox" id="price17">
+                    <label class=" dish-select dish-select__animation dish-select__animation--18" for="price17">
+                    <div class="dish-select__info">
+                        <h3>Macaron noisette et chocolat</h3>
+                        <p>Glace au caramel brun et sel de Guérande</p>
+                    </div>
+                    </label>
+                </article>
+    
+                <!--DESSERT 2-->
+                <article class="desktop-size">
+                    <input type="checkbox" id="price18">
+                    <label class=" dish-select dish-select__animation dish-select__animation--22" for="price18">
+                    <div class="dish-select__info">
+                        <h3>Baba au rhum revisité</h3>
+                        <p>Avec son coulis de citron</p>
+                    </div>
+                    </label>
+                </article>
+    
+                <!--DESSERT 3-->
+                <article class="desktop-size">
+                    <input type="checkbox" id="price19">
+                    <label class=" dish-select dish-select__animation dish-select__animation--23" for="price19">
+                    <div class="dish-select__info">
+                        <h3>Tarte au citron meringuée</h3>
+                        <p>Destructurée</p>
+                    </div>
+                    </label>
+                </article>
+    
+            </section>
+    
+            <button class="submit__order">Commander</button> <!--I have to read the documentation about the buttons and how to use it-->
         
+        </div>
 
-        <!--ENTREES-->
-        <section class="starters">
-
-            <h2 class="starters__title">Entrées</h2>
-
-            <!--ENTREE 1-->
-            <article class="desktop-size">
-                <input type="checkbox" id="price10">
-                <label class=" dish-select dish-select__animation dish-select__animation--25" for="price10">
-                <div class="dish-select__info">
-                    <h3>Ravioles de foie gras</h3>
-                    <p>Accompagnés de leur crème à la truffe</p>
-                </div>
-                </label>
-            </article>
-
-            <!--ENTREE 2-->
-            <article class="desktop-size">
-                <input type="checkbox" id="price11">
-                <label class=" dish-select dish-select__animation dish-select__animation--35" for="price11">
-                <div class="dish-select__info">
-                    <h3>Caviar osciètre</h3>
-                    <p>Sur blini à la farine de blé noir</p>
-                </div>
-                </label>
-            </article>
-
-            <!--ENTREE 3-->
-            <article class="desktop-size">
-                <input type="checkbox" id="price12">
-                <label class=" dish-select dish-select__animation dish-select__animation--20" for="price12">
-                <div class="dish-select__info">
-                    <h3>Homard et espuma de...</h3>
-                    <p>Mariné aux zests d'orange</p>
-                </div>
-                </label>
-            </article>
-
-            <!--ENTREE 4-->
-            <article class="desktop-size">
-                <input type="checkbox" id="price13">
-                <label class=" dish-select dish-select__animation dish-select__animation--35" for="price13">
-                <div class="dish-select__info">
-                    <h3>Foie gras de canard cuit entier</h3>
-                    <p>Confiture de figue et pain toasté</p>
-                </div>
-                </label>
-            </article>
-
-        </section>
-
-        <!--PLATS-->
-        <section class="dishes">
-
-            <h2 class="dishes__title">Plats</h2>
-
-            <!--PLAT 1-->
-            <article class="desktop-size">
-                <input type="checkbox" id="price14">
-                <label class=" dish-select dish-select__animation dish-select__animation--40" for="price14">
-                <div class="dish-select__info">
-                    <h3>Noix de coquilles Saint-Jacques</h3>
-                    <p>Sur lit de purée de céleri-rave</p>
-                </div>
-                </label>
-            </article>
-
-            <!--PLAT 2-->
-            <article class="desktop-size">
-                <input type="checkbox" id="price15">
-                <label class=" dish-select dish-select__animation dish-select__animation--35" for="price15">
-                <div class="dish-select__info">
-                    <h3>Langoustine poêlée</h3>
-                    <p>Purée de patate douce</p>
-                </div>
-                </label>
-            </article>
-
-            <!--PLAT 3-->
-            <article class="desktop-size">
-                <input type="checkbox" id="price16">
-                <label class=" dish-select dish-select__animation dish-select__animation--44" for="price16">
-                <div class="dish-select__info">
-                    <h3>Mijoté de queue de boeuf</h3>
-                    <p>Et riz sauvage aux zests de citron</p>
-                </div>
-                </label>
-            </article>
-
-        </section>
-
-        <!--DESSERTS-->
-        <section class="desserts">
-
-            <h2 class="desserts__title">Desserts</h2>
-
-            <!--DESSERT 1-->
-            <article class="desktop-size">
-                <input type="checkbox" id="price17">
-                <label class=" dish-select dish-select__animation dish-select__animation--18" for="price17">
-                <div class="dish-select__info">
-                    <h3>Macaron noisette et chocolat</h3>
-                    <p>Glace au caramel brun et sel de Guérande</p>
-                </div>
-                </label>
-            </article>
-
-            <!--DESSERT 2-->
-            <article class="desktop-size">
-                <input type="checkbox" id="price18">
-                <label class=" dish-select dish-select__animation dish-select__animation--22" for="price18">
-                <div class="dish-select__info">
-                    <h3>Baba au rhum revisité</h3>
-                    <p>Avec son coulis de citron</p>
-                </div>
-                </label>
-            </article>
-
-            <!--DESSERT 3-->
-            <article class="desktop-size">
-                <input type="checkbox" id="price19">
-                <label class=" dish-select dish-select__animation dish-select__animation--23" for="price19">
-                <div class="dish-select__info">
-                    <h3>Tarte au citron meringuée</h3>
-                    <p>Destructurée</p>
-                </div>
-                </label>
-            </article>
-
-        </section>
-
-        <button class="submit__order">Commander</button> <!--I have to read the documentation about the buttons and how to use it-->
-
-    </main>
+        </main>
 
 
     <footer class="footer">

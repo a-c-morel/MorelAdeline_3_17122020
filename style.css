@@ -6,6 +6,8 @@
 /*VALUES*/
 /*FLEX BEHAVIORS*/
 .card, body, header, header .about, main, main .howto, main .restaurants, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -14,6 +16,8 @@
 }
 
 .banner--menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -103,6 +107,8 @@ footer ul li .icon {
 
 /*FLEX BEHAVIORS*/
 .card, body, header, header .about, main, main .howto, main .restaurants, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -111,6 +117,8 @@ footer ul li .icon {
 }
 
 .banner--menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -144,6 +152,7 @@ main .howto, main .restaurants {
 .submit__order, .about .explore {
   border-radius: 30px;
   padding: 1.2rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
   border: none;
@@ -156,6 +165,7 @@ main .howto, main .restaurants {
 }
 
 .submit__order:hover, .about .explore:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
   background: linear-gradient(to bottom right, #ff8ade, #a06be1);
   -webkit-box-shadow: 5px 5px 10px #A0A0A0;
           box-shadow: 5px 5px 10px #A0A0A0;
@@ -172,7 +182,6 @@ main .howto, main .restaurants {
   background: white;
   -webkit-background-clip: text;
   background-clip: text;
-  /*I don't know if I can use it, because it is not standard but I checked on caniuse and it seems ok...*/
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
 }
@@ -222,6 +231,7 @@ input {
 @-webkit-keyframes like {
   0% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(0%, #fff));
     background: linear-gradient(to top, #FF79DA 0%, #fff 0%);
     background-size: auto;
     background-clip: text;
@@ -230,6 +240,7 @@ input {
   }
   25% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #FF79DA), color-stop(25%, #fff));
     background: linear-gradient(to top, #FF79DA 25%, #fff 25%);
     background-size: auto;
     background-clip: text;
@@ -238,6 +249,7 @@ input {
   }
   50% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #FF79DA), color-stop(50%, #fff));
     background: linear-gradient(to top, #FF79DA 50%, #fff 50%);
     background-size: auto;
     background-clip: text;
@@ -246,6 +258,7 @@ input {
   }
   75% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #FF79DA), color-stop(75%, #fff));
     background: linear-gradient(to top, #FF79DA 75%, #fff 75%);
     background-size: auto;
     background-clip: text;
@@ -254,6 +267,7 @@ input {
   }
   100% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(100%, #FF79DA), to(#fff));
     background: linear-gradient(to top, #FF79DA 100%, #fff 100%);
     background-size: auto;
     background-clip: text;
@@ -265,6 +279,7 @@ input {
 @keyframes like {
   0% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(0%, #fff));
     background: linear-gradient(to top, #FF79DA 0%, #fff 0%);
     background-size: auto;
     background-clip: text;
@@ -273,6 +288,7 @@ input {
   }
   25% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #FF79DA), color-stop(25%, #fff));
     background: linear-gradient(to top, #FF79DA 25%, #fff 25%);
     background-size: auto;
     background-clip: text;
@@ -281,6 +297,7 @@ input {
   }
   50% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #FF79DA), color-stop(50%, #fff));
     background: linear-gradient(to top, #FF79DA 50%, #fff 50%);
     background-size: auto;
     background-clip: text;
@@ -289,6 +306,7 @@ input {
   }
   75% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #FF79DA), color-stop(75%, #fff));
     background: linear-gradient(to top, #FF79DA 75%, #fff 75%);
     background-size: auto;
     background-clip: text;
@@ -297,6 +315,7 @@ input {
   }
   100% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(100%, #FF79DA), to(#fff));
     background: linear-gradient(to top, #FF79DA 100%, #fff 100%);
     background-size: auto;
     background-clip: text;
@@ -309,8 +328,10 @@ input {
 .loading {
   height: 200vh;
   width: 100%;
-  animation: loading_background 3.8s;
-  animation-timing-function: ease-out;
+  -webkit-animation: loading_background 3.8s;
+          animation: loading_background 3.8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
   position: absolute;
   z-index: 2;
   -webkit-animation-fill-mode: forwards;
@@ -318,9 +339,12 @@ input {
 }
 
 .loading__spinner {
-  animation: loading_spinner 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: 4;
+  -webkit-animation: loading_spinner 1s;
+          animation: loading_spinner 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -428,15 +452,18 @@ input {
 
 /*SLIDE-UP FOR STARTERS, DISHES AND DESSERTS SECTIONS*/
 .starters {
-  animation: slide-up 2s;
+  -webkit-animation: slide-up 2s;
+          animation: slide-up 2s;
 }
 
 .dishes {
-  animation: slide-up 4s;
+  -webkit-animation: slide-up 4s;
+          animation: slide-up 4s;
 }
 
 .desserts {
-  animation: slide-up 6s;
+  -webkit-animation: slide-up 6s;
+          animation: slide-up 6s;
 }
 
 @-webkit-keyframes slide-up {
@@ -562,6 +589,7 @@ input {
   padding: 1.5rem .9rem;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  background: #99E2D0;
   opacity: 0;
 }
 
@@ -602,8 +630,10 @@ input {
 #price35:checked ~ .dish-select__animation:after,
 #price36:checked ~ .dish-select__animation:after,
 #price37:checked ~ .dish-select__animation:after {
-  animation: dish-check .3s;
-  animation-fill-mode: forwards;
+  -webkit-animation: dish-check .3s;
+          animation: dish-check .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 #price1:checked ~ .dish-select__animation:before,
@@ -643,27 +673,31 @@ input {
 #price35:checked ~ .dish-select__animation:before,
 #price36:checked ~ .dish-select__animation:before,
 #price37:checked ~ .dish-select__animation:before {
-  animation: price-translation .3s;
-  animation-fill-mode: forwards;
+  -webkit-animation: price-translation .3s;
+          animation: price-translation .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes dish-check {
   from {
     opacity: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   to {
     opacity: 1;
-    background-color: #99E2D0;
   }
 }
 
 @keyframes dish-check {
   from {
     opacity: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   to {
     opacity: 1;
-    background-color: #99E2D0;
   }
 }
 
@@ -687,21 +721,35 @@ input {
 
 /*FLEX BEHAVIORS*/
 .card, body, header, header .about, main, main .howto, main .restaurants, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .banner--menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 main .howto, main .restaurants {
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .card__info, .banner--menu, header .place, header .about, .container {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*FONTS*/
@@ -718,6 +766,7 @@ main .howto, main .restaurants {
 .submit__order, .about .explore {
   border-radius: 30px;
   padding: 1.2rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
   border: none;
@@ -730,6 +779,7 @@ main .howto, main .restaurants {
 }
 
 .submit__order:hover, .about .explore:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
   background: linear-gradient(to bottom right, #ff8ade, #a06be1);
   -webkit-box-shadow: 5px 5px 10px #A0A0A0;
           box-shadow: 5px 5px 10px #A0A0A0;
@@ -742,21 +792,35 @@ main .howto, main .restaurants {
 
 /*FLEX BEHAVIORS*/
 .card, body, header, header .about, main, main .howto, main .restaurants, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .banner--menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 main .howto, main .restaurants {
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .card__info, .banner--menu, header .place, header .about, .container {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*FONTS*/
@@ -773,6 +837,7 @@ main .howto, main .restaurants {
 .submit__order, .about .explore {
   border-radius: 30px;
   padding: 1.2rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
   border: none;
@@ -785,6 +850,7 @@ main .howto, main .restaurants {
 }
 
 .submit__order:hover, .about .explore:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
   background: linear-gradient(to bottom right, #ff8ade, #a06be1);
   -webkit-box-shadow: 5px 5px 10px #A0A0A0;
           box-shadow: 5px 5px 10px #A0A0A0;
@@ -801,7 +867,6 @@ main .howto, main .restaurants {
   background: white;
   -webkit-background-clip: text;
   background-clip: text;
-  /*I don't know if I can use it, because it is not standard but I checked on caniuse and it seems ok...*/
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
 }
@@ -818,6 +883,7 @@ main .howto, main .restaurants {
           animation: like .4s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(96%, #FF79DA), color-stop(96%, #fff));
   background: linear-gradient(to top, #FF79DA 96%, #fff 96%);
   background-size: auto;
   background-clip: text;
@@ -850,6 +916,7 @@ input {
 @keyframes like {
   0% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(0%, #fff));
     background: linear-gradient(to top, #FF79DA 0%, #fff 0%);
     background-size: auto;
     background-clip: text;
@@ -858,6 +925,7 @@ input {
   }
   25% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #FF79DA), color-stop(25%, #fff));
     background: linear-gradient(to top, #FF79DA 25%, #fff 25%);
     background-size: auto;
     background-clip: text;
@@ -866,6 +934,7 @@ input {
   }
   50% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #FF79DA), color-stop(50%, #fff));
     background: linear-gradient(to top, #FF79DA 50%, #fff 50%);
     background-size: auto;
     background-clip: text;
@@ -874,6 +943,7 @@ input {
   }
   75% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #FF79DA), color-stop(75%, #fff));
     background: linear-gradient(to top, #FF79DA 75%, #fff 75%);
     background-size: auto;
     background-clip: text;
@@ -882,6 +952,7 @@ input {
   }
   100% {
     background: #FF79DA;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(100%, #FF79DA), to(#fff));
     background: linear-gradient(to top, #FF79DA 100%, #fff 100%);
     background-size: auto;
     background-clip: text;
@@ -894,17 +965,23 @@ input {
 .loading {
   height: 200vh;
   width: 100%;
-  animation: loading_background 3.8s;
-  animation-timing-function: ease-out;
+  -webkit-animation: loading_background 3.8s;
+          animation: loading_background 3.8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
   position: absolute;
   z-index: 2;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .loading__spinner {
-  animation: loading_spinner 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: 4;
+  -webkit-animation: loading_spinner 1s;
+          animation: loading_spinner 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -933,7 +1010,7 @@ input {
     background: black;
     opacity: 0.2;
     /*z-index: 1;
-    -> my first idea was to use z-index and decrease it to make it vanish,
+    -> my first idea was to use z-index and decrease it to make it disapear,
     but it was jerky and some elements seemed to pop up because of their z-index which were higher*/
   }
   75% {
@@ -967,15 +1044,18 @@ input {
 
 /*SLIDE-UP FOR STARTERS, DISHES AND DESSERTS SECTIONS*/
 .starters {
-  animation: slide-up 2s;
+  -webkit-animation: slide-up 2s;
+          animation: slide-up 2s;
 }
 
 .dishes {
-  animation: slide-up 4s;
+  -webkit-animation: slide-up 4s;
+          animation: slide-up 4s;
 }
 
 .desserts {
-  animation: slide-up 6s;
+  -webkit-animation: slide-up 6s;
+          animation: slide-up 6s;
 }
 
 @keyframes slide-up {
@@ -1088,6 +1168,7 @@ input {
   padding: 1.5rem .9rem;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  background: #99E2D0;
   opacity: 0;
 }
 
@@ -1128,8 +1209,10 @@ input {
 #price35:checked ~ .dish-select__animation:after,
 #price36:checked ~ .dish-select__animation:after,
 #price37:checked ~ .dish-select__animation:after {
-  animation: dish-check .3s;
-  animation-fill-mode: forwards;
+  -webkit-animation: dish-check .3s;
+          animation: dish-check .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 #price1:checked ~ .dish-select__animation:before,
@@ -1169,17 +1252,20 @@ input {
 #price35:checked ~ .dish-select__animation:before,
 #price36:checked ~ .dish-select__animation:before,
 #price37:checked ~ .dish-select__animation:before {
-  animation: price-translation .3s;
-  animation-fill-mode: forwards;
+  -webkit-animation: price-translation .3s;
+          animation: price-translation .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @keyframes dish-check {
   from {
     opacity: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   to {
     opacity: 1;
-    background-color: #99E2D0;
   }
 }
 
@@ -1209,9 +1295,15 @@ input {
 }
 
 .main-menu__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 2rem;
 }
 
@@ -1247,9 +1339,15 @@ input {
 }
 
 .dish-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-shadow: 1px 1px 10px #88888883;
           box-shadow: 1px 1px 10px #88888883;
   padding: 1rem;
@@ -1279,7 +1377,8 @@ input {
 }
 
 .dish-select__price {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   font-size: 1rem;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
@@ -1287,28 +1386,44 @@ input {
 
 .submit__order {
   margin-bottom: 3rem;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 12rem;
   margin-top: 2rem;
 }
 
 /*FLEX BEHAVIORS*/
 .card, body, header, header .about, main, main .howto, main .restaurants, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .banner--menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 main .howto, main .restaurants {
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .card__info, .banner--menu, header .place, header .about, .container {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*FONTS*/
@@ -1325,6 +1440,7 @@ main .howto, main .restaurants {
 .submit__order, .about .explore {
   border-radius: 30px;
   padding: 1.2rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
   border: none;
@@ -1337,6 +1453,7 @@ main .howto, main .restaurants {
 }
 
 .submit__order:hover, .about .explore:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8ade), to(#a06be1));
   background: linear-gradient(to bottom right, #ff8ade, #a06be1);
   -webkit-box-shadow: 5px 5px 10px #A0A0A0;
           box-shadow: 5px 5px 10px #A0A0A0;
@@ -1348,7 +1465,9 @@ main .howto, main .restaurants {
 }
 
 .card {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 90%;
   border-radius: 25px;
   margin-bottom: 1.5rem;
@@ -1397,8 +1516,12 @@ main .howto, main .restaurants {
 }
 
 .card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: .6rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1430,7 +1553,9 @@ main .howto, main .restaurants {
 
 .banner--menu {
   width: 70%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1rem;
   padding-left: 1rem;
   padding-right: 0;
@@ -1442,7 +1567,10 @@ main .howto, main .restaurants {
 
 @media screen and (min-width: 1010px) {
   header {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     height: 5rem;
     -webkit-box-shadow: 0 0 6px #888888;
             box-shadow: 0 0 6px #888888;
@@ -1452,8 +1580,12 @@ main .howto, main .restaurants {
     background-color: #f7f7f7;
   }
   header .about {
-    flex-direction: row;
-    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     width: 100%;
   }
   header .about h1 {
@@ -1473,20 +1605,47 @@ main .howto, main .restaurants {
             box-shadow: none;
   }
   .banner--menu {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .main-menu {
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .main-menu--menu1 {
+    background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  }
+  .main-menu--menu2 {
+    background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  }
+  .main-menu--menu3 {
+    background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  }
+  .main-menu--menu4 {
+    background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  }
+  .main-menu__info {
+    background-color: #f8f6f6c5;
+    background-size: cover;
+    border-radius: 20px;
     margin: 3rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    background: #f8f6f6c5;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    padding: 1rem;
   }
-  .main-menu__title {
-    justify-content: flex-start;
+  .main-menu__info__title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-  .main-menu h1 {
+  .main-menu__info h1 {
     margin-right: 2rem;
   }
   .banner__logo--menu {
@@ -1495,26 +1654,6 @@ main .howto, main .restaurants {
   .cover {
     display: none;
   }
-  .background {
-    height: 260vh;
-    width: 100%;
-    position: absolute;
-    top: 5rem;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  .background--menu1 {
-    background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-  }
-  .background--menu2 {
-    background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-  }
-  .background--menu3 {
-    background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  }
-  .background--menu4 {
-    background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  }
   footer {
     z-index: 1;
   }
@@ -1522,10 +1661,14 @@ main .howto, main .restaurants {
     width: 50%;
   }
   .submit__order {
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .main--index {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .howto {
     width: 40%;
@@ -1573,17 +1716,29 @@ ul {
 }
 
 header .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .place {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .flex-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1654,13 +1809,18 @@ main .restaurants {
 }
 
 .container {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   counter-reset: stepnumber;
 }
 
 .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: #f7f7f7;
   padding: 1.5rem;
   text-align: center;
