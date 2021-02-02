@@ -1654,9 +1654,6 @@ main .howto, main .restaurants {
   .cover {
     display: none;
   }
-  footer {
-    z-index: 1;
-  }
   .desktop-size {
     width: 50%;
   }
