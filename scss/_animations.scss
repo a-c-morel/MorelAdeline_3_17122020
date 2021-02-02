@@ -29,6 +29,10 @@
     color: transparent;
   }
   
+/*I used the background-clip: text value because the full and empty heart icon have exactly the same code
+in FontAwesome, so I used this little trick to make the border. It is an experimental property
+so I checked in caniuse to see if it was okay to use it with Firefox and Chrome at least.
+I tried different ways to do the heart and it was my favorite one so I kept it.*/
 .heart-animation{
     position: relative;
     &:after{
@@ -49,7 +53,9 @@
 input{
     display: none;
 }
-  
+
+/*To avoid repetitions, I made a mixin which allows me to customize the linear-gradient for each step
+of the animation. You can find it in '_mixins.scss'*/
 @keyframes like{
     0%{
       @include linear-gradient(0%, 0%);
@@ -217,6 +223,7 @@ input{
       @include price('23€')
     }
   }
+
   &:after{
     content: '\f058';
     font-family: "Font Awesome 5 Free";
@@ -233,6 +240,9 @@ input{
   }
 }
 
+/*I know this is a lot of selectors... but using an id for each dish allows the user
+to keep his/her choices (when coming back to a page, the inputs are still checked).
+This is important I think, to allow him/her to order at the end.*/
 #price1:checked ~ .dish-select__animation:after,
 #price2:checked ~ .dish-select__animation:after,
 #price3:checked ~ .dish-select__animation:after,
@@ -318,7 +328,6 @@ input{
 @keyframes dish-check{
   from{
     opacity: 0;
-    transform: rotate(90deg);
   }
   to{
     opacity: 1;
