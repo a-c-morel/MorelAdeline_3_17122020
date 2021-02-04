@@ -1672,7 +1672,7 @@ main .howto, main .restaurants {
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
-  .main--index {
+  .main-index {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
