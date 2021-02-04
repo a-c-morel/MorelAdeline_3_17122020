@@ -462,13 +462,13 @@ of the animation. You can find it in '_mixins.scss'*/
 }
 
 .dishes {
-  -webkit-animation: slide-up 4s;
-          animation: slide-up 4s;
+  -webkit-animation: slide-up 6s;
+          animation: slide-up 6s;
 }
 
 .desserts {
-  -webkit-animation: slide-up 6s;
-          animation: slide-up 6s;
+  -webkit-animation: slide-up 10s;
+          animation: slide-up 10s;
 }
 
 @-webkit-keyframes slide-up {
@@ -1059,13 +1059,13 @@ of the animation. You can find it in '_mixins.scss'*/
 }
 
 .dishes {
-  -webkit-animation: slide-up 4s;
-          animation: slide-up 4s;
+  -webkit-animation: slide-up 6s;
+          animation: slide-up 6s;
 }
 
 .desserts {
-  -webkit-animation: slide-up 6s;
-          animation: slide-up 6s;
+  -webkit-animation: slide-up 10s;
+          animation: slide-up 10s;
 }
 
 @keyframes slide-up {
