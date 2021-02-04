@@ -70,10 +70,6 @@
             margin: 3rem;
             padding: 1rem;
 
-            &__title{
-                justify-content: flex-start;
-            }
-
             h1{
                 margin-right: 2rem;
             }
@@ -115,4 +111,7 @@
         background-color: #ff79d934;
     }
 
+    .main-menu__title{
+        justify-content: flex-start;
+    }
 }

@@ -1651,11 +1651,6 @@ main .howto, main .restaurants {
     margin: 3rem;
     padding: 1rem;
   }
-  .main-menu__info__title {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
   .main-menu__info h1 {
     margin-right: 2rem;
   }
@@ -1689,6 +1684,11 @@ main .howto, main .restaurants {
   }
   .heart-animation:hover {
     background-color: #ff79d934;
+  }
+  .main-menu__title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
