@@ -1,3 +1,67 @@
+/*TABLETS*/
+@media screen and (min-width:765px){
+    .main-menu__title{
+        justify-content: center;
+    }
+
+    .main-menu__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1{
+            margin-right: 2rem;
+        }
+    }
+
+    .starters, .dishes, .desserts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dish-select{
+        
+        width: 50vw;
+        
+    
+        &__animation{
+            width: 50vw;
+    
+        }
+    
+        &__info{
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        
+            h3{
+                @include font(1.2rem, $bold);
+                width: 240px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            p{
+                @include font(1rem, $thin);
+                width: 230px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+    }
+
+
+
+
+
+}
+
+
+
+/*DESKTOP*/
 @media screen and (min-width:1010px){
     header{
         flex-direction: row;
@@ -62,17 +126,13 @@
         &--menu4{
             background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
         } 
-        
+
         &__info{
             background-color: #f8f6f6c5;
             background-size: cover;
             border-radius: $border-radius;
             margin: 3rem;
             padding: 1rem;
-
-            h1{
-                margin-right: 2rem;
-            }
         }
     }
 
@@ -109,9 +169,5 @@
 
     .heart-animation:hover{
         background-color: #ff79d934;
-    }
-
-    .main-menu__title{
-        justify-content: flex-start;
     }
 }

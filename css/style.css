@@ -1577,6 +1577,75 @@ main .howto, main .restaurants {
   font-size: 1.4rem;
 }
 
+/*TABLETS*/
+@media screen and (min-width: 765px) {
+  .main-menu__title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-menu__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-menu__info h1 {
+    margin-right: 2rem;
+  }
+  .starters, .dishes, .desserts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dish-select {
+    width: 50vw;
+  }
+  .dish-select__animation {
+    width: 50vw;
+  }
+  .dish-select__info {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+  .dish-select__info h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    width: 240px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .dish-select__info p {
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    width: 230px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+/*DESKTOP*/
 @media screen and (min-width: 1010px) {
   header {
     -webkit-box-orient: horizontal;
@@ -1652,9 +1721,6 @@ main .howto, main .restaurants {
     margin: 3rem;
     padding: 1rem;
   }
-  .main-menu__info h1 {
-    margin-right: 2rem;
-  }
   .banner__logo--menu {
     margin-left: 2rem;
   }
@@ -1685,11 +1751,6 @@ main .howto, main .restaurants {
   }
   .heart-animation:hover {
     background-color: #ff79d934;
-  }
-  .main-menu__title {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
 }
 
