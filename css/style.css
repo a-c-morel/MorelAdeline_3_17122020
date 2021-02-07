@@ -500,7 +500,6 @@ of the animation. You can find it in '_mixins.scss'*/
 /*DISH SELECTION*/
 .dish-select__animation {
   cursor: pointer;
-  position: relative;
 }
 
 .dish-select__animation--25:before {
@@ -1084,7 +1083,6 @@ of the animation. You can find it in '_mixins.scss'*/
 /*DISH SELECTION*/
 .dish-select__animation {
   cursor: pointer;
-  position: relative;
 }
 
 .dish-select__animation--25:before {
@@ -1350,21 +1348,32 @@ This is important I think, to allow him/her to order at the end.*/
 }
 
 .dish-select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-shadow: 1px 1px 10px #88888883;
           box-shadow: 1px 1px 10px #88888883;
-  padding: 1rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.3rem;
+  width: 90vw;
   max-height: 4rem;
   margin-bottom: 1.4rem;
   border-radius: 20px;
+  position: relative;
+}
+
+.dish-select__animation {
+  position: absolute;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 90vw;
+  max-height: 4rem;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.dish-select__info {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
 
 .dish-select__info h3 {
@@ -1385,14 +1394,6 @@ This is important I think, to allow him/her to order at the end.*/
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-
-.dish-select__price {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
 }
 
 .submit__order {

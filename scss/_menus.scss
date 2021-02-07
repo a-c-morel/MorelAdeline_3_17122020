@@ -54,16 +54,32 @@
 }
 
 .dish-select{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     @include shadow(1px 1px 10px #88888883);
-    padding: 1rem;
+    padding-top: 2.4rem;
+    padding-bottom: 2.3rem;
+    width: 90vw;
     max-height: 4rem;
     margin-bottom: 1.4rem;
     border-radius: $border-radius;
+    position: relative;
+
+    &__animation{
+        position: absolute;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        width: 90vw;
+        max-height: 4rem;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+    }
 
     &__info{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    
         h3{
             @include font(1.2rem, $bold);
             width: 240px;
@@ -78,11 +94,6 @@
             white-space: nowrap;
             overflow: hidden;
         }
-    }
-
-    &__price{
-        align-self: flex-end;
-        @include font(1rem, $bold);
     }
 }
 
