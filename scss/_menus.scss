@@ -22,6 +22,11 @@
         align-items: center;
         margin-top: 2rem;
     }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .cover{
