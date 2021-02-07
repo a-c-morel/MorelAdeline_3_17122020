@@ -147,10 +147,6 @@
         width: 50%;
     }
 
-    .submit__order{
-        align-self: flex-start;
-    }
-
     .main-index{
         flex-direction: row;
     }
@@ -170,4 +166,23 @@
     .heart-animation:hover{
         background-color: #ff79d934;
     }
+
+    .dish-select:hover{
+        .fa-check-circle{
+          animation: check .5s;
+          animation-fill-mode: forwards;
+        }
+        .dish-select__price{
+            right: 5rem;
+        }
+
+        .dish-select__check{
+            display: block;
+        }
+      }
+      
+      @keyframes check{
+        from{transform: rotate(180deg);}
+        to{transform: rotate(0deg);}
+      }
 }

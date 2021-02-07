@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap");
 /*FONT WEIGHTS*/
@@ -498,230 +497,17 @@ of the animation. You can find it in '_mixins.scss'*/
 }
 
 /*DISH SELECTION*/
-.dish-select__animation {
-  cursor: pointer;
-}
-
-.dish-select__animation--25:before {
-  content: "25€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--35:before {
-  content: "35€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--20:before {
-  content: "20€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--40:before {
-  content: "40€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--44:before {
-  content: "44€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--18:before {
-  content: "18€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--22:before {
-  content: "22€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--23:before {
-  content: "23€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation:after {
-  content: '\f058';
-  font-family: "Font Awesome 5 Free";
-  color: white;
-  font-size: 1.5rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1.5rem .9rem;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background: #99E2D0;
-  opacity: 0;
-}
-
-/*I know this is a lot of selectors... but using an id for each dish allows the user
-to keep his/her choices (when coming back to a page, the inputs are still checked).
-This is important I think, to allow him/her to order at the end.*/
-#price1:checked ~ .dish-select__animation:after,
-#price2:checked ~ .dish-select__animation:after,
-#price3:checked ~ .dish-select__animation:after,
-#price4:checked ~ .dish-select__animation:after,
-#price5:checked ~ .dish-select__animation:after,
-#price6:checked ~ .dish-select__animation:after,
-#price7:checked ~ .dish-select__animation:after,
-#price8:checked ~ .dish-select__animation:after,
-#price9:checked ~ .dish-select__animation:after,
-#price10:checked ~ .dish-select__animation:after,
-#price11:checked ~ .dish-select__animation:after,
-#price12:checked ~ .dish-select__animation:after,
-#price13:checked ~ .dish-select__animation:after,
-#price14:checked ~ .dish-select__animation:after,
-#price15:checked ~ .dish-select__animation:after,
-#price16:checked ~ .dish-select__animation:after,
-#price17:checked ~ .dish-select__animation:after,
-#price18:checked ~ .dish-select__animation:after,
-#price19:checked ~ .dish-select__animation:after,
-#price20:checked ~ .dish-select__animation:after,
-#price21:checked ~ .dish-select__animation:after,
-#price22:checked ~ .dish-select__animation:after,
-#price23:checked ~ .dish-select__animation:after,
-#price24:checked ~ .dish-select__animation:after,
-#price25:checked ~ .dish-select__animation:after,
-#price26:checked ~ .dish-select__animation:after,
-#price27:checked ~ .dish-select__animation:after,
-#price28:checked ~ .dish-select__animation:after,
-#price29:checked ~ .dish-select__animation:after,
-#price30:checked ~ .dish-select__animation:after,
-#price31:checked ~ .dish-select__animation:after,
-#price32:checked ~ .dish-select__animation:after,
-#price33:checked ~ .dish-select__animation:after,
-#price34:checked ~ .dish-select__animation:after,
-#price35:checked ~ .dish-select__animation:after,
-#price36:checked ~ .dish-select__animation:after,
-#price37:checked ~ .dish-select__animation:after {
-  -webkit-animation: dish-check .3s;
-          animation: dish-check .3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-#price1:checked ~ .dish-select__animation:before,
-#price2:checked ~ .dish-select__animation:before,
-#price3:checked ~ .dish-select__animation:before,
-#price4:checked ~ .dish-select__animation:before,
-#price5:checked ~ .dish-select__animation:before,
-#price6:checked ~ .dish-select__animation:before,
-#price7:checked ~ .dish-select__animation:before,
-#price8:checked ~ .dish-select__animation:before,
-#price9:checked ~ .dish-select__animation:before,
-#price10:checked ~ .dish-select__animation:before,
-#price11:checked ~ .dish-select__animation:before,
-#price12:checked ~ .dish-select__animation:before,
-#price13:checked ~ .dish-select__animation:before,
-#price14:checked ~ .dish-select__animation:before,
-#price15:checked ~ .dish-select__animation:before,
-#price16:checked ~ .dish-select__animation:before,
-#price17:checked ~ .dish-select__animation:before,
-#price18:checked ~ .dish-select__animation:before,
-#price19:checked ~ .dish-select__animation:before,
-#price20:checked ~ .dish-select__animation:before,
-#price21:checked ~ .dish-select__animation:before,
-#price22:checked ~ .dish-select__animation:before,
-#price23:checked ~ .dish-select__animation:before,
-#price24:checked ~ .dish-select__animation:before,
-#price25:checked ~ .dish-select__animation:before,
-#price26:checked ~ .dish-select__animation:before,
-#price27:checked ~ .dish-select__animation:before,
-#price28:checked ~ .dish-select__animation:before,
-#price29:checked ~ .dish-select__animation:before,
-#price30:checked ~ .dish-select__animation:before,
-#price31:checked ~ .dish-select__animation:before,
-#price32:checked ~ .dish-select__animation:before,
-#price33:checked ~ .dish-select__animation:before,
-#price34:checked ~ .dish-select__animation:before,
-#price35:checked ~ .dish-select__animation:before,
-#price36:checked ~ .dish-select__animation:before,
-#price37:checked ~ .dish-select__animation:before {
-  -webkit-animation: price-translation .3s;
-          animation: price-translation .3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes dish-check {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+/*.dish-select:hover{
+  .fa-check-circle{
+    animation: check .5s;
+    animation-fill-mode: forwards;
   }
 }
 
-@keyframes dish-check {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes price-translation {
-  from {
-    right: 1rem;
-  }
-  to {
-    right: 4rem;
-  }
-}
-
-@keyframes price-translation {
-  from {
-    right: 1rem;
-  }
-  to {
-    right: 4rem;
-  }
-}
-
+@keyframes check{
+  from{transform: rotate(180deg);}
+  to{transform: rotate(0deg);}
+}*/
 /*FLEX BEHAVIORS*/
 .card, body, header, header .about, main, main .howto, main .restaurants, .container {
   display: -webkit-box;
@@ -1081,212 +867,17 @@ of the animation. You can find it in '_mixins.scss'*/
 }
 
 /*DISH SELECTION*/
-.dish-select__animation {
-  cursor: pointer;
-}
-
-.dish-select__animation--25:before {
-  content: "25€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--35:before {
-  content: "35€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--20:before {
-  content: "20€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--40:before {
-  content: "40€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--44:before {
-  content: "44€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--18:before {
-  content: "18€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--22:before {
-  content: "22€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation--23:before {
-  content: "23€";
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-.dish-select__animation:after {
-  content: '\f058';
-  font-family: "Font Awesome 5 Free";
-  color: white;
-  font-size: 1.5rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1.5rem .9rem;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background: #99E2D0;
-  opacity: 0;
-}
-
-/*I know this is a lot of selectors... but using an id for each dish allows the user
-to keep his/her choices (when coming back to a page, the inputs are still checked).
-This is important I think, to allow him/her to order at the end.*/
-#price1:checked ~ .dish-select__animation:after,
-#price2:checked ~ .dish-select__animation:after,
-#price3:checked ~ .dish-select__animation:after,
-#price4:checked ~ .dish-select__animation:after,
-#price5:checked ~ .dish-select__animation:after,
-#price6:checked ~ .dish-select__animation:after,
-#price7:checked ~ .dish-select__animation:after,
-#price8:checked ~ .dish-select__animation:after,
-#price9:checked ~ .dish-select__animation:after,
-#price10:checked ~ .dish-select__animation:after,
-#price11:checked ~ .dish-select__animation:after,
-#price12:checked ~ .dish-select__animation:after,
-#price13:checked ~ .dish-select__animation:after,
-#price14:checked ~ .dish-select__animation:after,
-#price15:checked ~ .dish-select__animation:after,
-#price16:checked ~ .dish-select__animation:after,
-#price17:checked ~ .dish-select__animation:after,
-#price18:checked ~ .dish-select__animation:after,
-#price19:checked ~ .dish-select__animation:after,
-#price20:checked ~ .dish-select__animation:after,
-#price21:checked ~ .dish-select__animation:after,
-#price22:checked ~ .dish-select__animation:after,
-#price23:checked ~ .dish-select__animation:after,
-#price24:checked ~ .dish-select__animation:after,
-#price25:checked ~ .dish-select__animation:after,
-#price26:checked ~ .dish-select__animation:after,
-#price27:checked ~ .dish-select__animation:after,
-#price28:checked ~ .dish-select__animation:after,
-#price29:checked ~ .dish-select__animation:after,
-#price30:checked ~ .dish-select__animation:after,
-#price31:checked ~ .dish-select__animation:after,
-#price32:checked ~ .dish-select__animation:after,
-#price33:checked ~ .dish-select__animation:after,
-#price34:checked ~ .dish-select__animation:after,
-#price35:checked ~ .dish-select__animation:after,
-#price36:checked ~ .dish-select__animation:after,
-#price37:checked ~ .dish-select__animation:after {
-  -webkit-animation: dish-check .3s;
-          animation: dish-check .3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-#price1:checked ~ .dish-select__animation:before,
-#price2:checked ~ .dish-select__animation:before,
-#price3:checked ~ .dish-select__animation:before,
-#price4:checked ~ .dish-select__animation:before,
-#price5:checked ~ .dish-select__animation:before,
-#price6:checked ~ .dish-select__animation:before,
-#price7:checked ~ .dish-select__animation:before,
-#price8:checked ~ .dish-select__animation:before,
-#price9:checked ~ .dish-select__animation:before,
-#price10:checked ~ .dish-select__animation:before,
-#price11:checked ~ .dish-select__animation:before,
-#price12:checked ~ .dish-select__animation:before,
-#price13:checked ~ .dish-select__animation:before,
-#price14:checked ~ .dish-select__animation:before,
-#price15:checked ~ .dish-select__animation:before,
-#price16:checked ~ .dish-select__animation:before,
-#price17:checked ~ .dish-select__animation:before,
-#price18:checked ~ .dish-select__animation:before,
-#price19:checked ~ .dish-select__animation:before,
-#price20:checked ~ .dish-select__animation:before,
-#price21:checked ~ .dish-select__animation:before,
-#price22:checked ~ .dish-select__animation:before,
-#price23:checked ~ .dish-select__animation:before,
-#price24:checked ~ .dish-select__animation:before,
-#price25:checked ~ .dish-select__animation:before,
-#price26:checked ~ .dish-select__animation:before,
-#price27:checked ~ .dish-select__animation:before,
-#price28:checked ~ .dish-select__animation:before,
-#price29:checked ~ .dish-select__animation:before,
-#price30:checked ~ .dish-select__animation:before,
-#price31:checked ~ .dish-select__animation:before,
-#price32:checked ~ .dish-select__animation:before,
-#price33:checked ~ .dish-select__animation:before,
-#price34:checked ~ .dish-select__animation:before,
-#price35:checked ~ .dish-select__animation:before,
-#price36:checked ~ .dish-select__animation:before,
-#price37:checked ~ .dish-select__animation:before {
-  -webkit-animation: price-translation .3s;
-          animation: price-translation .3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@keyframes dish-check {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+/*.dish-select:hover{
+  .fa-check-circle{
+    animation: check .5s;
+    animation-fill-mode: forwards;
   }
 }
 
-@keyframes price-translation {
-  from {
-    right: 1rem;
-  }
-  to {
-    right: 4rem;
-  }
-}
-
+@keyframes check{
+  from{transform: rotate(180deg);}
+  to{transform: rotate(0deg);}
+}*/
 /*MENUS*/
 .main-menu {
   border-top-left-radius: 20px;
@@ -1357,7 +948,24 @@ This is important I think, to allow him/her to order at the end.*/
   bottom: -7px;
 }
 
+.fa-check-circle {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.dish-select__check {
+  background-color: #99E2D0;
+  display: none;
+  position: absolute;
+  padding: 1.6rem;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 .dish-select {
+  cursor: pointer;
   -webkit-box-shadow: 1px 1px 10px #88888883;
           box-shadow: 1px 1px 10px #88888883;
   padding-top: 2.4rem;
@@ -1367,17 +975,27 @@ This is important I think, to allow him/her to order at the end.*/
   margin-bottom: 1.4rem;
   border-radius: 20px;
   position: relative;
+  /*&:hover{
+        .dish-select__price{
+            right: 5rem;
+        }
+
+        .dish-select__check{
+            display: block;
+        }*/
+  /*.fa-check-circle{
+            transform: rotate(90deg);
+        }
+    }*/
 }
 
-.dish-select__animation {
+.dish-select__price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
   position: absolute;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  width: 90vw;
-  max-height: 4rem;
-  top: 0;
-  left: 0;
-  z-index: 2;
+  top: 1.7rem;
+  right: 1rem;
 }
 
 .dish-select__info {
@@ -1740,10 +1358,6 @@ main .howto, main .restaurants {
   .desktop-size {
     width: 50%;
   }
-  .submit__order {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
   .main-index {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1761,6 +1375,38 @@ main .howto, main .restaurants {
   }
   .heart-animation:hover {
     background-color: #ff79d934;
+  }
+  .dish-select:hover .fa-check-circle {
+    -webkit-animation: check .5s;
+            animation: check .5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .dish-select:hover .dish-select__price {
+    right: 5rem;
+  }
+  .dish-select:hover .dish-select__check {
+    display: block;
+  }
+  @-webkit-keyframes check {
+    from {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+    to {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  }
+  @keyframes check {
+    from {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+    to {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
   }
 }
 

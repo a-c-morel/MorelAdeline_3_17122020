@@ -58,7 +58,24 @@
     }
 }
 
+.fa-check-circle{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.dish-select__check{
+    background-color: $tertiary;
+    display: none;
+    position: absolute;
+    padding: 1.6rem;
+    top: 0;
+    right: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
 .dish-select{
+    cursor: pointer;
     @include shadow(1px 1px 10px #88888883);
     padding-top: 2.4rem;
     padding-bottom: 2.3rem;
@@ -68,16 +85,11 @@
     border-radius: $border-radius;
     position: relative;
 
-    &__animation{
+    &__price{
+        @include font(1.2rem, $bold);
         position: absolute;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        width: 90vw;
-        max-height: 4rem;
-        top: 0;
-        left: 0;
-        z-index: 2;
-
+        top: 1.7rem;
+        right: 1rem;
     }
 
     &__info{
@@ -100,6 +112,20 @@
             overflow: hidden;
         }
     }
+
+    /*&:hover{
+        .dish-select__price{
+            right: 5rem;
+        }
+
+        .dish-select__check{
+            display: block;
+        }*/
+
+        /*.fa-check-circle{
+            transform: rotate(90deg);
+        }
+    }*/
 }
 
 .submit__order{
