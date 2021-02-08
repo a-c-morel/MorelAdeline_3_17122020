@@ -785,6 +785,12 @@ main .howto, main .restaurants {
   font-family: 'Roboto', sans-serif;
 }
 
+.card .like {
+  position: absolute;
+  top: 11.5rem;
+  right: 1rem;
+}
+
 .banner {
   -webkit-box-shadow: 0 0 6px #888888;
           box-shadow: 0 0 6px #888888;
