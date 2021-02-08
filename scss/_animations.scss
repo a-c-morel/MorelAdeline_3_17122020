@@ -176,17 +176,3 @@ of the animation. You can find it in '_mixins.scss'*/
     opacity: 1;
   }
 }
-
-/*DISH SELECTION*/
-
-/*.dish-select:hover{
-  .fa-check-circle{
-    animation: check .5s;
-    animation-fill-mode: forwards;
-  }
-}
-
-@keyframes check{
-  from{transform: rotate(180deg);}
-  to{transform: rotate(0deg);}
-}*/

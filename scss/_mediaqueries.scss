@@ -173,16 +173,44 @@
           animation-fill-mode: forwards;
         }
         .dish-select__price{
-            right: 5rem;
+            right: 6rem;
         }
 
         .dish-select__check{
             display: block;
         }
+        .dish-select__info{
+            h3{
+                width: 180px;
+            }
+            p{
+                width: 180px;
+            }
+        }
       }
       
-      @keyframes check{
+    @keyframes check{
         from{transform: rotate(180deg);}
         to{transform: rotate(0deg);}
-      }
+    }
+
+    .desktopflex{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .dish-select{
+        width: 90%;
+
+        &__info{
+            font-size: 1rem;
+        }
+        &__price{
+            font-size: 1rem;
+        }
+    }
+    .starters, .dishes, .desserts{
+        width: 100%;
+    }
+
 }
